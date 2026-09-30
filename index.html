@@ -1,0 +1,1410 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Elevel | Mídia OOH e DOOH em Goiânia</title>
+<meta name="description" content="Rede de mídia OOH e DOOH presente em ambientes selecionados de Goiânia. Mais de 60 faces digitais conectando marcas à rotina da cidade.">
+<link rel="canonical" href="https://elevelmidias.com.br/">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0B0B0A">
+<meta name="format-detection" content="telephone=no">
+<!-- compartilhamento -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Elevel Mídias">
+<meta property="og:title" content="Elevel | Mídia OOH e DOOH em Goiânia">
+<meta property="og:description" content="Rede de mídia OOH e DOOH presente em ambientes selecionados de Goiânia. Mais de 60 faces digitais conectando marcas à rotina da cidade.">
+<meta property="og:url" content="https://elevelmidias.com.br/">
+<meta property="og:image" content="https://elevelmidias.com.br/icons/og-elevel.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Logo Elevel Mídia DOOH">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Elevel | Mídia OOH e DOOH em Goiânia">
+<meta name="twitter:description" content="Rede de mídia OOH e DOOH presente em ambientes selecionados de Goiânia. Mais de 60 faces digitais conectando marcas à rotina da cidade.">
+<meta name="twitter:image" content="https://elevelmidias.com.br/icons/og-elevel.jpg">
+<!-- ícones (símbolo oficial Elevel) -->
+<link rel="icon" href="icons/favicon.ico" sizes="32x32">
+<link rel="icon" href="icons/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<!-- fonte hospedada no próprio site (sem bloqueio de terceiros) -->
+<link rel="preload" href="fonts/schibsted-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/schibsted-400.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Elevel Mídias", "url": "https://elevelmidias.com.br/", "logo": "https://elevelmidias.com.br/icons/icon-512.png", "description": "Rede de mídia OOH e DOOH presente em ambientes selecionados de Goiânia. Mais de 60 faces digitais conectando marcas à rotina da cidade.", "areaServed": {"@type": "City", "name": "Goiânia"}, "sameAs": ["https://www.instagram.com/elevelmidias/"], "email": "bruno@elevelmidias.com.br"}</script>
+<style>
+@font-face{font-family:"Schibsted Grotesk";font-style:normal;font-weight:400;font-display:swap;src:url(fonts/schibsted-400.woff2) format("woff2")}
+@font-face{font-family:"Schibsted Grotesk";font-style:normal;font-weight:500;font-display:swap;src:url(fonts/schibsted-500.woff2) format("woff2")}
+@font-face{font-family:"Schibsted Grotesk";font-style:normal;font-weight:700;font-display:swap;src:url(fonts/schibsted-700.woff2) format("woff2")}
+/* =========================================================
+   ELEVEL · DESIGN SYSTEM (tokens)
+   Layout: blocos claros e escuros alternados contam a história;
+   grid de 12 colunas com margens generosas; o "ponto" laranja
+   (ponto final = ponto de mídia) é o elemento-assinatura.
+   Breakpoints: sm 640px · md 960px · lg 1280px
+   ========================================================= */
+:root{
+  color-scheme: light;
+  /* Cores oficiais extraídas do ELEVEL LOGO.ai */
+  --c-laranja:#EC680C;          /* laranja chapado oficial */
+  --c-laranja-escuro:#C85800;   /* fim do degradê oficial */
+  --c-laranja-claro:#E18700;    /* início do degradê oficial */
+  --c-grafite:#1D1D1B;          /* cinza escuro oficial */
+  --c-cinza-marca:#9B9A9A;      /* cinza claro oficial */
+  /* Neutros da interface */
+  --c-preto:#0B0B0A;
+  --c-offblack:#151514;
+  --c-cinza-800:#2B2B29;
+  --c-cinza-600:#5C5B59;
+  --c-cinza-300:#C9C8C5;
+  --c-cinza-150:#E4E3E0;
+  --c-offwhite:#F3F3F1;
+  --c-branco:#FFFFFF;
+  --c-erro:#D93A2B;
+
+  /* Tipografia */
+  --f-sans:"Schibsted Grotesk","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --fw-regular:400; --fw-medium:500; --fw-bold:700;
+  --fs-display:clamp(2.75rem,7.3vw,8.25rem);
+  --fs-h1:clamp(2.5rem,6.2vw,6.25rem);
+  --fs-h2:clamp(2.125rem,4.6vw,4.75rem);
+  --fs-h3:clamp(1.5rem,2.4vw,2.25rem);
+  --fs-num:clamp(5rem,15vw,14rem);
+  --fs-lead:clamp(1.0625rem,1.25vw,1.3125rem);
+  --fs-body:1rem;
+  --fs-small:.875rem;
+  --fs-label:.75rem;
+  --lh-display:.9; --lh-head:1; --lh-body:1.6;
+  --ls-head:-.03em; --ls-label:.14em;
+
+  /* Espaço */
+  --s-1:.25rem; --s-2:.5rem; --s-3:.75rem; --s-4:1rem; --s-5:1.5rem; --s-6:2rem;
+  --s-7:3rem; --s-8:4rem; --s-9:6rem; --s-10:8rem;
+  --secao-y:clamp(5.5rem,12vw,11rem);
+
+  /* Grid */
+  --margem:clamp(1.25rem,5vw,5rem);
+  --max:1440px;
+  --gutter:clamp(1rem,2vw,1.5rem);
+
+  /* Forma */
+  --radius-0:0; --radius-1:2px; --radius-2:4px;
+  --linha-clara:rgba(11,11,10,.12);
+  --linha-escura:rgba(255,255,255,.14);
+
+  /* Movimento */
+  --ease:cubic-bezier(.2,.7,.2,1);
+  --ease-io:cubic-bezier(.65,0,.35,1);
+  --dur-1:160ms; --dur-2:320ms; --dur-3:700ms; --dur-4:1400ms;
+
+  --header-h:72px;
+}
+@media (max-width:959px){:root{--header-h:60px}}
+
+/* Temas por bloco */
+.tema-escuro{--bg:var(--c-preto);--fg:var(--c-branco);--muted:rgba(255,255,255,.62);--linha:var(--linha-escura);--acento-texto:var(--c-laranja);background:var(--bg);color:var(--fg)}
+.tema-claro{--bg:var(--c-offwhite);--fg:var(--c-preto);--muted:var(--c-cinza-600);--linha:var(--linha-clara);--acento-texto:var(--c-laranja-escuro);background:var(--bg);color:var(--fg)}
+.tema-branco{--bg:var(--c-branco);--fg:var(--c-preto);--muted:var(--c-cinza-600);--linha:var(--linha-clara);--acento-texto:var(--c-laranja-escuro);background:var(--bg);color:var(--fg)}
+
+/* ---------- base ---------- */
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:var(--header-h);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--c-preto);color:var(--c-branco);font-family:var(--f-sans);font-size:var(--fs-body);line-height:var(--lh-body);font-weight:var(--fw-regular);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,video{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3,p,figure,ol,ul,dl,dd{margin:0}
+ol,ul{padding:0;list-style:none}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--c-laranja);outline-offset:3px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.pular{position:fixed;left:var(--s-4);top:var(--s-4);z-index:100;background:var(--c-branco);color:var(--c-preto);padding:var(--s-3) var(--s-4);transform:translateY(-200%)}
+.pular:focus{transform:none}
+
+.cont{max-width:var(--max);margin-inline:auto;padding-inline:var(--margem)}
+.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gutter)}
+.secao{padding-block:var(--secao-y)}
+
+/* ---------- tipografia ---------- */
+.rotulo{font-size:var(--fs-label);font-weight:var(--fw-medium);letter-spacing:var(--ls-label);text-transform:uppercase;color:var(--muted)}
+.titulo{font-weight:var(--fw-bold);letter-spacing:var(--ls-head);line-height:var(--lh-head);text-transform:uppercase;text-wrap:balance}
+.t-display{font-size:var(--fs-display);line-height:var(--lh-display)}
+.t-h1{font-size:var(--fs-h1)}
+.t-h2{font-size:var(--fs-h2)}
+.t-h3{font-size:var(--fs-h3)}
+.lead{font-size:var(--fs-lead);color:var(--muted);max-width:44ch;line-height:1.5}
+.ponto{color:var(--c-laranja)}                  /* o ponto final laranja */
+.mudo{color:var(--muted)}
+.num{font-variant-numeric:tabular-nums lining-nums}
+
+/* ---------- botões e links ---------- */
+.btn{--btn-bg:transparent;--btn-fg:var(--fg);--btn-bd:var(--linha);
+  display:inline-flex;align-items:center;gap:.75em;min-height:52px;padding:0 var(--s-5);border:1px solid var(--btn-bd);border-radius:var(--radius-1);background:var(--btn-bg);color:var(--btn-fg);
+  font-size:var(--fs-small);font-weight:var(--fw-bold);letter-spacing:.08em;text-transform:uppercase;text-decoration:none;cursor:pointer;white-space:nowrap;
+  transition:background var(--dur-2) var(--ease),color var(--dur-2) var(--ease),border-color var(--dur-2) var(--ease)}
+.btn .seta{display:inline-block;transition:transform var(--dur-2) var(--ease)}
+.btn:hover .seta{transform:translateX(4px)}
+.btn-primario{--btn-bg:var(--c-laranja);--btn-fg:var(--c-preto);--btn-bd:var(--c-laranja)}
+.btn-primario:hover{--btn-bg:var(--c-laranja-claro);--btn-bd:var(--c-laranja-claro)}
+.btn-contorno:hover{--btn-bd:var(--fg)}
+.btn-solido{--btn-bg:var(--fg);--btn-fg:var(--bg);--btn-bd:var(--fg)}
+.btn-solido:hover{--btn-bg:var(--c-laranja);--btn-bd:var(--c-laranja);--btn-fg:var(--c-preto)}
+.btn[aria-disabled="true"],.btn:disabled{opacity:.45;cursor:not-allowed}
+.btn[aria-disabled="true"]:hover .seta,.btn:disabled:hover .seta{transform:none}
+.link-seta{display:inline-flex;align-items:center;gap:.6em;font-size:var(--fs-small);font-weight:var(--fw-bold);letter-spacing:.08em;text-transform:uppercase;text-decoration:none;padding-block:var(--s-2);border-bottom:1px solid currentColor}
+.link-seta .seta{color:var(--c-laranja);transition:transform var(--dur-2) var(--ease)}
+.link-seta:hover .seta{transform:translateX(4px)}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+.header{position:fixed;inset:0 0 auto 0;z-index:50;padding-top:env(safe-area-inset-top,0px);color:var(--c-branco);transition:background var(--dur-3) var(--ease),border-color var(--dur-3) var(--ease);border-bottom:1px solid transparent}
+.header.solido{background:rgba(11,11,10,.84);-webkit-backdrop-filter:blur(14px) saturate(1.2);backdrop-filter:blur(14px) saturate(1.2);border-bottom-color:var(--linha-escura)}
+.header .cont{display:flex;align-items:center;gap:var(--s-6);height:var(--header-h)}
+.logo{display:block;width:112px;color:var(--c-laranja);flex:none}
+.logo svg{display:block;width:100%;height:auto}
+/* Navegação desktop: presente, discreta, com respiro */
+.nav{display:flex;align-items:center;gap:clamp(1.5rem,3.2vw,3.25rem);margin-left:auto}
+.nav a{position:relative;font-size:.6875rem;font-weight:var(--fw-medium);letter-spacing:.16em;text-transform:uppercase;text-decoration:none;color:rgba(255,255,255,.68);padding-block:var(--s-3);transition:color var(--dur-2) var(--ease)}
+.nav a::before{content:"";position:absolute;left:-12px;top:50%;width:5px;height:5px;margin-top:-2.5px;border-radius:50%;background:var(--c-laranja);transform:scale(0);transition:transform var(--dur-2) var(--ease)}
+.nav a:hover,.nav a:focus-visible{color:var(--c-branco)}
+.nav a:hover::before,.nav a:focus-visible::before{transform:scale(1)}
+.menu-btn{display:none;align-items:center;justify-content:center;width:48px;height:48px;margin-right:-12px;border:0;background:transparent;cursor:pointer;padding:0;color:inherit}
+.menu-btn span{display:block;width:24px;height:1.5px;background:currentColor;position:relative;transition:background var(--dur-2) var(--ease)}
+.menu-btn span::before,.menu-btn span::after{content:"";position:absolute;right:0;height:1.5px;background:currentColor;transition:transform var(--dur-2) var(--ease),top var(--dur-2) var(--ease),width var(--dur-2) var(--ease)}
+.menu-btn span::before{top:-7px;width:24px}.menu-btn span::after{top:7px;width:14px}
+.menu-aberto .menu-btn span{background:transparent}
+.menu-aberto .menu-btn span::before{top:0;width:24px;transform:rotate(45deg)}
+.menu-aberto .menu-btn span::after{top:0;width:24px;transform:rotate(-45deg)}
+@media (max-width:899px){
+  .nav{display:none}
+  .menu-btn{display:inline-flex;margin-left:auto}
+}
+/* Menu mobile aberto: mesmo vocabulário do Hero */
+.menu-mobile{position:fixed;inset:0;z-index:45;background:var(--c-preto);color:var(--c-branco);padding:calc(var(--header-h) + env(safe-area-inset-top,0px) + var(--s-7)) var(--margem) calc(var(--s-6) + env(safe-area-inset-bottom,0px));display:flex;flex-direction:column;gap:var(--s-7);overflow-y:auto}
+.menu-mobile nav{display:flex;flex-direction:column;gap:var(--s-1)}
+.menu-mobile nav a{display:inline-flex;align-items:baseline;align-self:flex-start;font-size:clamp(1.875rem,8.4vw,3.25rem);font-weight:var(--fw-bold);letter-spacing:-.04em;line-height:1;white-space:nowrap;text-transform:uppercase;text-decoration:none;padding-block:var(--s-2);animation:menu-entra var(--dur-3) var(--ease) both;animation-delay:calc(var(--i,0) * 55ms + 60ms)}
+.menu-mobile nav a::after{content:".";color:var(--c-laranja);transform:scale(0);transform-origin:50% 80%;transition:transform var(--dur-2) var(--ease)}
+.menu-mobile nav a:hover::after,.menu-mobile nav a:focus-visible::after,.menu-mobile nav a:active::after{transform:scale(1)}
+@keyframes menu-entra{from{opacity:0;transform:translateY(18px)}}
+.menu-mobile .rodape-menu{margin-top:auto;display:flex;flex-direction:column;gap:var(--s-5);animation:menu-entra var(--dur-3) var(--ease) both;animation-delay:360ms}
+.menu-mobile .acoes{display:flex;flex-direction:column;gap:var(--s-2)}
+.menu-mobile .btn{justify-content:space-between;min-height:56px}
+.menu-mobile .btn-contorno{--fg:var(--c-branco);--linha:rgba(255,255,255,.22)}
+.menu-mobile .info{display:flex;justify-content:space-between;gap:var(--s-4);flex-wrap:wrap;font-size:.6875rem;font-weight:var(--fw-medium);letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5)}
+.menu-mobile .info a{text-decoration:none;color:inherit}
+
+/* =========================================================
+   1. HERO
+   ========================================================= */
+.hero{position:relative;height:100vh;height:100svh;min-height:520px;overflow:hidden;isolation:isolate}
+.hero-midia{position:absolute;inset:0;z-index:-2;background:var(--c-preto)}
+.hero-midia video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+/* Motion tipográfico (Fase 1). Substituído automaticamente por vídeo quando hero.video existir. */
+.motion{position:absolute;inset:0;overflow:hidden;color:var(--c-branco);pointer-events:none}
+.motion .m{position:absolute;font-weight:var(--fw-bold);text-transform:uppercase;letter-spacing:-.045em;line-height:.86;white-space:nowrap;will-change:transform,opacity}
+.motion .ln{position:relative;display:block;overflow:hidden;clip-path:inset(0 -.4em);padding-top:.14em;margin-top:-.14em}
+.motion .ln.inl{display:inline-block}
+.motion .in{display:inline-block;will-change:transform}
+.motion .dot{color:var(--c-laranja);display:inline-block;transform-origin:50% 80%}
+.motion .contorno{color:transparent;-webkit-text-stroke:1.5px rgba(255,255,255,.85)}
+.motion .etq{font-size:var(--fs-small);font-weight:var(--fw-medium);letter-spacing:var(--ls-label);line-height:1.2}
+.motion .etq .in::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--c-laranja);margin-right:.8em;vertical-align:.08em}
+.motion .risco{position:absolute;left:0;right:0;top:54%;height:.075em;background:var(--c-laranja);transform-origin:left center}
+.motion .pres-camada{display:block;white-space:nowrap}
+.motion .pres-contorno{color:transparent;-webkit-text-stroke:1.5px rgba(255,255,255,.7)}
+.motion .pres-cheio{position:absolute;left:0;top:0;color:var(--c-branco);clip-path:inset(-10% 100% -10% 0)}
+.motion .pres-dot{position:absolute;left:100%;bottom:.02em;transform:scale(0)}
+.motion .logo-m{color:var(--c-laranja)}
+.motion .logo-m svg{display:block;width:100%;height:auto}
+.motion .vertical{writing-mode:vertical-rl;transform:translateY(-50%) rotate(180deg)}
+.motion .vertical .ln{padding-top:0;margin-top:0}
+.motion .centro{transform:translate(-50%,-50%)}
+.motion .num-m{letter-spacing:-.06em;transform-origin:50% 50%}
+.motion .num-m .mil{font-size:.34em;letter-spacing:-.03em;margin-left:.08em}
+.motion .etq{font-size:clamp(.9375rem,1.5vw,1.375rem);letter-spacing:.12em}
+.hero-meta{position:absolute;right:var(--margem);bottom:calc(var(--s-5) + env(safe-area-inset-bottom,0px));z-index:2}
+.hero-loop{display:flex;align-items:center;gap:var(--s-3);font-size:.6875rem;font-weight:var(--fw-medium);letter-spacing:var(--ls-label);text-transform:uppercase;color:rgba(255,255,255,.4);transition:color var(--dur-2) var(--ease)}
+.hero-loop:hover,.hero-loop:focus-within{color:rgba(255,255,255,.75)}
+.hero-loop .trilho{position:relative;width:64px;height:1px;background:rgba(255,255,255,.14);overflow:hidden}
+.hero-loop .trilho b{position:absolute;inset:0;background:rgba(236,104,12,.75);transform-origin:left;transform:scaleX(0)}
+.pausar{all:unset;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:var(--radius-1);color:inherit}
+.pausar:hover{color:var(--c-branco)}
+.pausar:focus-visible{outline:2px solid var(--c-laranja);outline-offset:2px}
+.pausar svg{width:9px;height:9px}
+.rolar{position:absolute;left:50%;bottom:calc(var(--s-5) + env(safe-area-inset-bottom,0px));z-index:2;width:1px;height:44px;margin-left:-.5px;background:rgba(255,255,255,.16);transition:opacity var(--dur-3) var(--ease)}
+.rolar::after{content:"";position:absolute;left:-2px;top:0;width:5px;height:5px;border-radius:50%;background:var(--c-laranja);animation:rolar 2.6s var(--ease-io) infinite}
+@keyframes rolar{0%{transform:translateY(-4px);opacity:0}20%{opacity:1}80%{opacity:1}100%{transform:translateY(40px);opacity:0}}
+@media (max-width:959px){
+}
+
+/* =========================================================
+   2. TRANSIÇÃO
+   ========================================================= */
+.transicao{height:220vh;position:relative}
+.transicao-fixa{position:sticky;top:0;height:100vh;height:100svh;display:flex;align-items:center}
+.transicao .cont{width:100%}
+.transicao p{font-weight:var(--fw-bold);letter-spacing:var(--ls-head);line-height:1;text-transform:uppercase;font-size:clamp(2.25rem,5.6vw,5.75rem);max-width:16ch;text-wrap:balance}
+.transicao .l1{color:var(--c-branco);opacity:calc(1 - var(--p,0) * .8);transition:opacity var(--dur-1) linear}
+.transicao .l1 s{text-decoration:none;background:linear-gradient(var(--c-laranja),var(--c-laranja)) no-repeat 0 55%/calc(var(--p2,0) * 100%) .08em}
+.transicao .l2{margin-top:var(--s-6);color:var(--c-branco);opacity:var(--p3,0);transform:translateY(calc((1 - var(--p3,0)) * 24px))}
+
+/* =========================================================
+   3. NÚMEROS
+   ========================================================= */
+/* Elevel em números: escala + contexto. Números monumentais que se preenchem com o scroll. */
+.escala{padding-block:var(--secao-y) var(--s-9);overflow:hidden}
+.escala .rotulo{display:block}
+.escala-bloco{position:relative;margin-top:var(--s-9)}
+.escala-bloco + .escala-bloco{margin-top:clamp(5rem,12vw,11rem)}
+.escala-tit{font-size:var(--fs-h2);font-weight:var(--fw-bold);letter-spacing:-.035em;line-height:.95;text-transform:uppercase;text-wrap:balance}
+.escala-num{display:block;font-weight:var(--fw-bold);letter-spacing:-.065em;line-height:.8;white-space:nowrap;font-variant-numeric:lining-nums;
+  color:transparent;-webkit-text-stroke:1.5px var(--c-preto);
+  background-image:linear-gradient(0deg,var(--c-preto) 0 var(--f,0%),transparent var(--f,0%) 100%);-webkit-background-clip:text;background-clip:text}
+.escala-num .mil{font-size:.3em;letter-spacing:-.03em;margin-left:.06em;-webkit-text-stroke-width:1px}
+.escala-rot{display:flex;align-items:center;gap:.75em;font-size:clamp(.875rem,1.3vw,1.125rem);font-weight:var(--fw-bold);letter-spacing:.14em;text-transform:uppercase}
+.escala-rot::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--c-laranja);flex:none}
+/* bloco 1: título à esquerda, +60 à direita saindo pela borda */
+.b1 .escala-tit{max-width:9ch}
+.b1 .escala-num{font-size:min(36vw, 78vh);text-align:right;margin-right:-4vw;margin-top:calc(var(--s-6) * -1)}
+.b1 .escala-rot{margin-top:var(--s-5)}
+/* bloco 2: título à direita, +400 mil saindo pela borda esquerda */
+.b2 .escala-tit{margin-left:auto;max-width:9ch;text-align:right}
+.b2 .escala-num{font-size:min(27vw, 62vh);margin-left:-2.5vw;margin-top:var(--s-4)}
+.b2 .escala-rot{justify-content:flex-end;margin-top:var(--s-5)}
+.b2 .escala-rot::before{order:2}
+.escala-texto{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--gutter);margin-top:clamp(4rem,9vw,8rem)}
+.escala-texto p{grid-column:2;font-size:clamp(1.25rem,2.1vw,2rem);line-height:1.3;letter-spacing:-.015em;font-weight:var(--fw-medium);max-width:30ch;color:var(--c-preto)}
+.escala-texto p .mudo{color:var(--c-cinza-600)}
+/* costura com a próxima seção */
+.costura{position:relative;height:clamp(4rem,8vw,6.5rem);margin-top:var(--s-7)}
+.costura::before{content:"";position:absolute;left:var(--margem);top:0;bottom:0;width:1px;background:var(--linha-clara)}
+.costura::after{content:"";position:absolute;left:calc(var(--margem) - 2px);top:0;width:5px;height:5px;border-radius:50%;background:var(--c-laranja);transform:translateY(calc(var(--c,0) * (clamp(4rem,8vw,6.5rem) - 5px)))}
+@media (max-width:759px){
+  .escala-tit{font-size:clamp(2.5rem,11.5vw,3.5rem)}
+  .b1 .escala-num{font-size:52vw;margin-right:-5vw;margin-top:var(--s-6)}
+  .b2 .escala-tit{margin-left:0;text-align:left}
+  .b2 .escala-num{font-size:40vw;margin-left:-3vw;margin-top:var(--s-6)}
+  .b2 .escala-num .mil{display:block;font-size:.5em;text-align:right;margin:.08em 3vw 0 0}
+  .b2 .escala-rot{justify-content:flex-start}
+  .b2 .escala-rot::before{order:0}
+  .escala-texto{grid-template-columns:1fr}
+  .escala-texto p{grid-column:1;font-size:clamp(1.25rem,5.6vw,1.5rem)}
+}
+@media (prefers-reduced-motion:reduce){.escala-num{--f:100%!important}.costura::after{transform:none}}
+
+
+/* =========================================================
+   4. ROTINA
+   ========================================================= */
+/* Fazemos parte da rotina: tipografia editorial, scroll natural, deslocamento horizontal guiado pelo scroll */
+.rotina{position:relative;overflow:hidden;padding-bottom:0}
+.rotina-tit{font-size:clamp(3rem,9.2vw,9.5rem);font-weight:var(--fw-bold);letter-spacing:-.045em;line-height:.9;text-transform:uppercase}
+.rotina-tit > span{display:block}
+.momentos{margin-top:clamp(4rem,8vw,7rem);display:flex;flex-direction:column}
+.momento{position:relative;display:flex;flex-direction:column;align-items:flex-start}
+.momento .par{display:inline-flex;flex-direction:column;align-items:flex-start;max-width:none;will-change:transform;transform:translate3d(var(--x,0),0,0)}
+.momento + .momento{margin-top:clamp(2rem,4vw,4rem)}
+.momento .verbo{display:block;font-weight:var(--fw-bold);letter-spacing:-.055em;line-height:.84;text-transform:uppercase;white-space:nowrap;transform-origin:50% 100%}
+.momento .cat{display:block;margin-top:clamp(.6rem,1.1vw,1.1rem);padding-left:.06em;font-size:clamp(.875rem,1.3vw,1.125rem);font-weight:var(--fw-bold);letter-spacing:.14em;text-transform:uppercase;clip-path:inset(0 var(--cat,0%) 0 0);transition:clip-path var(--dur-3) var(--ease)}
+.js .momento:not(.visto) .cat{--cat:100%}
+/* composições desktop: cada palavra com seu lugar */
+.m-trabalhe .verbo{font-size:min(15vw, 30vh)}
+.m-treine{align-items:flex-end;text-align:right}
+.m-treine .par,.m-viva .par{align-items:flex-end}
+.m-treine .verbo{font-size:min(16vw, 32vh)}
+.m-more{padding-left:16vw}
+.m-more .verbo{font-size:min(20vw, 40vh)}
+.m-viva .par{align-items:center}
+.m-viva{align-items:center;text-align:center;padding-block:clamp(1.5rem,3vw,3rem)}
+.m-viva .verbo{font-size:min(12vw, 24vh)}
+.m-circule .verbo{font-size:min(17vw, 34vh)}
+/* saída: ONDE? */
+.onde{margin-top:clamp(4rem,8vw,7rem);display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:var(--s-6) var(--gutter);align-items:end}
+.onde .onde-tit{padding-bottom:0;max-width:none;font-size:clamp(4rem,15vw,15rem);font-weight:var(--fw-bold);letter-spacing:-.06em;line-height:.8;text-transform:uppercase}
+.onde-tit .ponto{letter-spacing:0}
+.onde p{font-size:clamp(1.125rem,1.7vw,1.5rem);line-height:1.35;font-weight:var(--fw-medium);letter-spacing:-.01em;max-width:24ch;padding-bottom:.4em}
+.onde .link-seta{margin-top:var(--s-5)}
+@media (max-width:759px){
+  .rotina-tit{font-size:12.6vw}
+  .momento + .momento{margin-top:var(--s-8)}
+  .m-trabalhe .verbo{font-size:17.5vw}
+  .m-treine .verbo{font-size:23vw}
+  .m-more{padding-left:0;align-items:flex-end;text-align:right}
+  .m-more .verbo{font-size:31vw}
+  .m-more .par{align-items:flex-end}
+  .m-viva{align-items:flex-start;text-align:left;padding-block:var(--s-5)}
+  .m-viva .par{align-items:flex-start}
+  .m-viva .verbo{font-size:34vw}
+  .m-circule .verbo{font-size:19.5vw}
+  .onde{grid-template-columns:1fr}
+  .onde .onde-tit{font-size:30vw}
+}
+@media (prefers-reduced-motion:reduce){.momento .par,.momento .verbo{transform:none!important}.js .momento:not(.visto) .cat{--cat:0%}}
+
+/* =========================================================
+   5. NOSSA REDE · portfólio editorial
+   Um sistema, cinco composições. Cada ativo usa um "layout"
+   definido nos dados; novos ativos reaproveitam os mesmos.
+   Desktop e mobile têm figuras próprias (.fd / .fm).
+   ========================================================= */
+.rede{position:relative;padding-top:clamp(2.5rem,5vw,4rem);padding-bottom:var(--secao-y)}
+.rede-cab{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:var(--s-7) var(--gutter);align-items:end}
+.rede-tit{margin-top:var(--s-5);font-size:clamp(3.5rem,10.5vw,10.5rem);font-weight:var(--fw-bold);letter-spacing:-.055em;line-height:.82;text-transform:uppercase}
+.rede-tit .ponto{letter-spacing:0}
+.rede-lead{font-size:clamp(1.125rem,1.5vw,1.375rem);line-height:1.35;font-weight:var(--fw-medium);letter-spacing:-.01em;max-width:30ch}
+.rede-indice{margin-top:var(--s-6);border-top:1px solid var(--fg)}
+.rede-indice a{display:grid;grid-template-columns:3.2ch minmax(0,1fr) auto;gap:var(--s-4);align-items:baseline;padding:.8em 0;border-bottom:1px solid var(--linha);text-decoration:none;font-weight:var(--fw-bold);text-transform:uppercase;letter-spacing:.02em;font-size:.9375rem;transition:padding var(--dur-2) var(--ease)}
+.rede-indice .n{font-variant-numeric:tabular-nums;color:var(--muted);font-weight:var(--fw-medium);transition:color var(--dur-2) var(--ease)}
+.rede-indice .seta{color:var(--muted);transition:color var(--dur-2) var(--ease),transform var(--dur-2) var(--ease)}
+.rede-indice a:hover{padding-left:var(--s-2)}
+.rede-indice a:hover .n,.rede-indice a:hover .seta{color:var(--c-laranja)}
+.rede-indice a:hover .seta{transform:translateY(3px)}
+
+/* ativo */
+.ativo{outline:none;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gutter);scroll-margin-top:calc(var(--header-h) + var(--s-6))}
+.rede-ativos{margin-top:clamp(5rem,10vw,9rem)}
+.ativo + .ativo{margin-top:clamp(7rem,15vw,14rem)}
+.at-cab{display:flex;align-items:center;gap:var(--s-4);min-width:0}
+.at-num{font-size:clamp(1.75rem,2.6vw,2.5rem);font-weight:var(--fw-bold);letter-spacing:-.03em;line-height:1;font-variant-numeric:tabular-nums}
+.at-regua{flex:0 0 clamp(2rem,5vw,5rem);height:1px;background:var(--fg);opacity:.35}
+.at-ctx{font-size:var(--fs-label);font-weight:var(--fw-medium);letter-spacing:var(--ls-label);text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:.6em;flex-wrap:wrap}
+.at-ctx .mais{color:var(--c-laranja);font-weight:var(--fw-bold)}
+.at-nome{margin-top:var(--s-5);font-size:clamp(3rem,8vw,8.5rem);font-weight:var(--fw-bold);letter-spacing:-.05em;line-height:.84;text-transform:uppercase;text-wrap:balance}
+.at-nome .ponto{letter-spacing:0}
+.at-info{min-width:0}
+.at-faces{display:flex;align-items:flex-end;gap:var(--s-4)}
+.at-faces .qt{font-size:clamp(4.5rem,7.5vw,7.5rem);font-weight:var(--fw-bold);letter-spacing:-.065em;line-height:.78;font-variant-numeric:tabular-nums lining-nums}
+.at-faces .rot{font-size:var(--fs-label);font-weight:var(--fw-medium);letter-spacing:var(--ls-label);text-transform:uppercase;line-height:1.35}
+.at-dist{display:flex;align-items:flex-end;gap:var(--s-5);margin-top:var(--s-5);padding-top:var(--s-4);border-top:1px solid var(--linha)}
+.at-dist li{display:flex;align-items:flex-end;gap:var(--s-3)}
+.at-dist b{font-size:clamp(2.25rem,3.4vw,3.25rem);font-weight:var(--fw-bold);letter-spacing:-.05em;line-height:.8;font-variant-numeric:tabular-nums lining-nums}
+.at-dist span{font-size:var(--fs-label);font-weight:var(--fw-medium);letter-spacing:var(--ls-label);text-transform:uppercase;color:var(--muted);line-height:1}
+.at-dist .mais{align-self:center;color:var(--c-laranja);font-weight:var(--fw-bold);font-size:1.25rem;line-height:1}
+.at-copy{margin-top:var(--s-6);font-size:var(--fs-lead);line-height:1.5;max-width:36ch;text-wrap:pretty}
+
+/* figuras */
+.at-f{margin:0;min-width:0;align-self:start}
+.at-img{position:relative;overflow:hidden;background:var(--c-cinza-150)}
+.at-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.at-f figcaption{margin-top:var(--s-3);font-size:.6875rem;font-weight:var(--fw-medium);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:.6em}
+.at-f figcaption::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--c-laranja)}
+
+/* entrada suave */
+.js .ativo .at-img{transition:clip-path 1.1s var(--ease)}
+.js .ativo:not(.visto) .at-img{clip-path:inset(8% 0 0 0)}
+.js .ativo .at-img img{transition:transform 1.4s var(--ease)}
+.js .ativo:not(.visto) .at-img img{transform:scale(1.06)}
+
+/* fechamento */
+.rede-fim{margin-top:clamp(7rem,14vw,12rem);padding-top:var(--s-6);border-top:1px solid var(--fg);display:flex;justify-content:space-between;align-items:flex-end;gap:var(--s-6);flex-wrap:wrap}
+.rede-fim p{font-size:clamp(1.625rem,3vw,3rem);font-weight:var(--fw-bold);letter-spacing:-.04em;line-height:1;text-transform:uppercase;max-width:22ch}
+.rede-fim .mudo{color:var(--muted)}
+
+/* ---------- desktop: composições ---------- */
+@media (min-width:960px){
+  .fm{display:none}
+  .ativo > *{grid-row:auto}
+  /* 01 · arquitetura + mídia: nome monumental, torre dominante; elevador e totem como prova, em diagonal */
+  .l-arquitetura-midia .at-cab{grid-column:1/-1;grid-row:1}
+  .l-arquitetura-midia .at-nome{grid-column:1/-1;grid-row:2;font-size:clamp(5rem,15vw,15.5rem)}
+  .l-arquitetura-midia .fd1{grid-column:1/8;grid-row:3/5;margin-top:var(--s-7)}
+  .l-arquitetura-midia .at-info{grid-column:9/-1;grid-row:3;margin-top:var(--s-7)}
+  .l-arquitetura-midia .fd2{grid-column:9/-1;grid-row:4;margin-top:var(--s-7)}
+  .l-arquitetura-midia .fd3{grid-column:4/7;grid-row:5;margin-top:var(--s-7)}
+  /* 02 · fachada + mídia: texto à esquerda, fachada à direita, tela vertical abaixo do texto */
+  .l-fachada-midia .at-cab{grid-column:1/6;grid-row:1}
+  .l-fachada-midia .at-nome{grid-column:1/6;grid-row:2;font-size:clamp(3rem,6.6vw,6.75rem)}
+  .l-fachada-midia .at-info{grid-column:1/5;grid-row:3;margin-top:var(--s-7)}
+  .l-fachada-midia .fd1{grid-column:6/-1;grid-row:1/5}
+  .l-fachada-midia .fd2{grid-column:2/5;grid-row:4;margin-top:var(--s-8)}
+  /* 03 · arquitetura + detalhes: fachada ampla; academia sobreposta à fachada e detalhe vertical sob o texto */
+  .l-arquitetura-detalhes .at-cab{grid-column:1/-1;grid-row:1}
+  .l-arquitetura-detalhes .at-nome{grid-column:1/-1;grid-row:2}
+  .l-arquitetura-detalhes .fd1{grid-column:1/10;grid-row:3;margin-top:var(--s-7)}
+  .l-arquitetura-detalhes .at-info{grid-column:1/6;grid-row:4;margin-top:var(--s-7)}
+  .l-arquitetura-detalhes .fd2{grid-column:8/-1;grid-row:4;margin-top:clamp(-11rem,-11vw,-5rem);position:relative;z-index:1}
+  .l-arquitetura-detalhes .fd2 .at-img{outline:clamp(8px,.9vw,14px) solid var(--bg)}
+  .l-arquitetura-detalhes .fd3{grid-column:2/5;grid-row:5;margin-top:var(--s-7)}
+  /* 04 · principal + secundárias: nome à direita, fachada como estabelecimento; recepção e salão como prova */
+  .l-principal-secundaria .at-cab{grid-column:1/-1;grid-row:1;justify-content:flex-end}
+  .l-principal-secundaria .at-nome{grid-column:1/-1;grid-row:2;text-align:right}
+  .l-principal-secundaria .fd1{grid-column:6/-1;grid-row:3/5;margin-top:var(--s-7)}
+  .l-principal-secundaria .at-info{grid-column:1/5;grid-row:3;margin-top:var(--s-7)}
+  .l-principal-secundaria .fd2{grid-column:1/5;grid-row:4;margin-top:var(--s-7)}
+  .l-principal-secundaria .fd3{grid-column:8/12;grid-row:5;margin-top:var(--s-7)}
+  /* 05 · compacto: texto e imagem lado a lado */
+  .l-compacto .at-cab{grid-column:1/6;grid-row:1}
+  .l-compacto .at-nome{grid-column:1/6;grid-row:2;font-size:clamp(3rem,6.2vw,6.25rem)}
+  .l-compacto .at-info{grid-column:1/5;grid-row:3;margin-top:var(--s-7)}
+  .l-compacto .fd1{grid-column:6/-1;grid-row:1/5}
+  .rede-indice{max-width:28rem}
+}
+/* ---------- mobile: composição própria ---------- */
+@media (max-width:959px){
+  .fd{display:none}
+  .rede-cab{grid-template-columns:1fr;gap:var(--s-6)}
+  .rede-tit{font-size:21vw}
+  .ativo{grid-template-columns:minmax(0,1fr)}
+  .ativo > *{grid-column:1/-1}
+  .rede-ativos{margin-top:var(--s-9)}
+  .ativo + .ativo{margin-top:var(--s-10)}
+  .at-cab{order:1}
+  .at-nome{order:2;font-size:14.5vw;margin-top:var(--s-4)}
+  .l-arquitetura-midia .at-nome{font-size:24vw}
+  .fm1{order:3;margin-top:var(--s-6);margin-inline:calc(-1 * var(--margem))}
+  .fm1 figcaption{padding-inline:var(--margem)}
+  .at-info{order:4;margin-top:var(--s-6)}
+  .at-faces .qt{font-size:max(4.5rem,21vw)}
+  .at-copy{font-size:1.0625rem}
+  .fm2{order:5;margin-top:2.5rem;width:72%}
+  .fm3{order:6;margin-top:1.625rem;width:56%}
+  .fm2 figcaption,.fm3 figcaption{margin-top:.625rem}
+  .ativo:nth-child(odd) .fm2,.ativo:nth-child(even) .fm3{margin-left:auto}
+  .rede-fim{margin-top:var(--s-10)}
+}
+@media (prefers-reduced-motion:reduce){.js .ativo .at-img,.js .ativo .at-img img{transition:none;clip-path:none!important;transform:none!important}}
+
+/* =========================================================
+   6. PARA ANUNCIANTES
+   Argumento tipográfico + uma única foto real (totem Órion).
+   Contexto, frequência e segmentação levam à síntese: presença.
+   ========================================================= */
+.anunc{padding-block:var(--secao-y)}
+.anunc-tit{margin-top:var(--s-5);font-size:clamp(2.6rem,6.3vw,7rem);font-weight:var(--fw-bold);letter-spacing:-.05em;line-height:.9;text-transform:uppercase}
+.anunc-tit .fr{display:block}
+.anunc-tit .fr + .fr{margin-top:.18em}
+.anunc-tit .fr-a{color:rgba(255,255,255,.42)}
+.anunc-tit .m{display:block;overflow:hidden;clip-path:inset(0 -.4em);padding:.14em 0 .04em;margin-top:-.14em}
+.anunc-tit .m > span{display:block}
+.anunc-corpo{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gutter);margin-top:clamp(4rem,8vw,7rem);align-items:start}
+.anunc-foto{grid-column:1/6;margin:0}
+.anunc-foto .img{position:relative;overflow:hidden;background:var(--c-offblack)}
+.anunc-foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.anunc-foto figcaption{margin-top:var(--s-3);font-size:.6875rem;font-weight:var(--fw-medium);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:.6em}
+.anunc-foto figcaption::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--c-laranja)}
+.anunc-texto{grid-column:7/-1;padding-top:clamp(0rem,3vw,3rem)}
+.anunc-intro{font-size:clamp(1.25rem,1.9vw,1.75rem);line-height:1.3;font-weight:var(--fw-medium);letter-spacing:-.015em;max-width:26ch}
+.anunc-ideias{margin-top:clamp(3rem,6vw,5rem)}
+.ideia + .ideia{margin-top:clamp(2rem,3.6vw,3.25rem)}
+.ideia:nth-child(2){padding-left:14%}
+.ideia:nth-child(3){padding-left:5%}
+.ideia h3{font-size:clamp(2.25rem,4vw,4.25rem);font-weight:var(--fw-bold);letter-spacing:-.045em;line-height:.9;text-transform:uppercase}
+.ideia h3 .ponto,.anunc-sintese h3 .ponto{display:inline-block;letter-spacing:0}
+.ideia p{margin-top:var(--s-3);color:var(--muted);font-size:var(--fs-body);line-height:1.5;max-width:40ch}
+.anunc-sintese{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gutter);align-items:end;margin-top:clamp(4rem,8vw,7rem)}
+.anunc-sintese h3{grid-column:1/-1;grid-row:1;white-space:nowrap;font-size:clamp(4rem,12vw,13rem);font-weight:var(--fw-bold);letter-spacing:-.06em;line-height:.8;text-transform:uppercase;margin-left:-.04em}
+.anunc-sintese p{grid-column:9/-1;grid-row:2;margin-top:var(--s-5);font-size:var(--fs-lead);line-height:1.45;max-width:30ch}
+.anunc-cta{display:flex;justify-content:space-between;align-items:flex-end;gap:var(--s-6);flex-wrap:wrap;margin-top:clamp(4rem,8vw,7rem);padding-top:var(--s-6);border-top:1px solid var(--linha)}
+.anunc-pergunta{font-size:clamp(1.75rem,3.4vw,3.25rem);font-weight:var(--fw-bold);letter-spacing:-.04em;line-height:.95;text-transform:uppercase}
+.anunc-pergunta span{display:block}
+.anunc-acao{display:flex;flex-direction:column;align-items:flex-end;gap:var(--s-3)}
+.anunc-apoio{font-size:var(--fs-label);letter-spacing:var(--ls-label);text-transform:uppercase;color:var(--muted)}
+
+/* movimento: só quando ajuda a leitura do argumento */
+.js .anunc-tit .m > span{transform:translateY(105%);transition:transform 1s var(--ease)}
+.js .anunc-tit.visto .m > span{transform:none}
+.js .anunc-tit .m:nth-child(2) > span{transition-delay:.1s}
+.js .anunc-tit .fr-b .m:nth-child(1) > span{transition-delay:.35s}
+.js .anunc-tit .fr-b .m:nth-child(2) > span{transition-delay:.45s}
+.js .anunc-foto .img{clip-path:inset(100% 0 0 0);transition:clip-path 1.3s var(--ease-io)}
+.js .anunc-foto.visto .img{clip-path:inset(0 0 0 0)}
+.js .ideia h3,.js .ideia p{opacity:0;transform:translateY(18px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.js .ideia p{transition-delay:.12s}
+.js .ideia.visto h3,.js .ideia.visto p{opacity:1;transform:none}
+.js .ideia h3 .ponto,.js .anunc-sintese h3 .ponto{transform:scale(0);transition:transform .45s cubic-bezier(.3,1.6,.5,1) .5s}
+.js .visto h3 .ponto{transform:none}
+/* PRESENÇA: contorno que se preenche, eco do Hero */
+.js .anunc-sintese h3 .pal{color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.55);transition:color 1.1s var(--ease) .2s,-webkit-text-stroke-color 1.1s var(--ease) .2s}
+.js .anunc-sintese.visto h3 .pal{color:var(--fg);-webkit-text-stroke-color:transparent}
+.js .anunc-sintese p{opacity:0;transition:opacity .9s var(--ease) .6s}
+.js .anunc-sintese.visto p{opacity:1}
+.js .anunc-sintese h3 .ponto{transition-delay:1.1s}
+
+@media (max-width:959px){
+  .anunc-tit{font-size:10.6vw;text-wrap:balance}
+  .anunc-corpo{display:block;margin-top:var(--s-8)}
+  .anunc-foto{width:calc(84% + var(--margem));margin-left:auto;margin-right:calc(-1 * var(--margem))}
+  .anunc-foto figcaption{padding-left:0}
+  .anunc-texto{padding-top:0;margin-top:var(--s-7)}
+  .anunc-ideias{margin-top:var(--s-7)}
+  .ideia h3{font-size:10.4vw}
+  .ideia:nth-child(2){padding-left:12%}
+  .ideia:nth-child(3){padding-left:4%}
+  .anunc-sintese{display:block;margin-top:var(--s-9)}
+  .anunc-sintese h3{font-size:15.2vw}
+  .anunc-sintese p{margin-top:var(--s-4);padding-bottom:0}
+  .anunc-cta{display:block;margin-top:var(--s-9)}
+  .anunc-pergunta{font-size:7.8vw;text-wrap:balance}
+  .anunc-pergunta span{display:inline}
+  .anunc-acao{align-items:stretch;margin-top:var(--s-6)}
+  .anunc-acao .btn{justify-content:space-between}
+}
+@media (prefers-reduced-motion:reduce){
+  .js .anunc-tit .m > span,.js .anunc-foto .img,.js .ideia h3,.js .ideia p,.js .anunc-sintese p,.js .ideia h3 .ponto,.js .anunc-sintese h3 .ponto{transform:none!important;opacity:1!important;clip-path:none!important;transition:none!important}
+  .js .anunc-sintese h3 .pal{color:var(--fg)!important;-webkit-text-stroke-color:transparent!important;transition:none!important}
+}
+
+/* =========================================================
+   7. A ELEVEL · respiração clara, só tipografia
+   A crença; "em todo lugar" é riscado pelo scroll; a conclusão entra.
+   ========================================================= */
+.elevel{padding-block:var(--secao-y)}
+.elevel-tit{margin-top:var(--s-6);font-weight:var(--fw-bold);text-transform:uppercase;letter-spacing:-.045em}
+.crenca{display:block;font-size:clamp(2.1rem,4.5vw,5rem);line-height:.95}
+.crenca .seg{display:inline}
+.crenca .quebra{display:block;height:0}
+.risco{position:relative;display:inline-block;color:rgb(11 11 10 / calc(1 - var(--r,0) * .6));transition:color .2s linear}
+.risco .traco{position:absolute;left:-.04em;right:-.04em;top:52%;height:.075em;background:var(--c-laranja);transform-origin:0 50%;transform:scaleX(var(--r,0))}
+.conclusao{display:block;margin-top:clamp(2.5rem,6vw,5.5rem);font-size:clamp(3.5rem,9.4vw,10.5rem);line-height:.84;letter-spacing:-.06em}
+.conclusao .m{display:block;overflow:hidden;clip-path:inset(0 -.4em);padding:.12em 0 .04em;margin-top:-.12em}
+.conclusao .m.c1{padding-left:24%}
+.conclusao .m > span{display:block}
+.conclusao .ponto{display:inline-block;letter-spacing:0}
+.elevel-texto{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gutter);margin-top:clamp(3.5rem,7vw,6rem)}
+.elevel-texto div{grid-column:7/-1;max-width:34ch}
+.elevel-texto p{font-size:var(--fs-lead);line-height:1.5}
+.elevel-texto p + p{margin-top:var(--s-4);font-weight:var(--fw-medium)}
+.js .conclusao .m > span{transform:translateY(105%);transition:transform 1s var(--ease)}
+.js .conclusao .m + .m > span{transition-delay:.12s}
+.js .conclusao.visto .m > span{transform:none}
+.js .conclusao .ponto{transform:scale(0);transition:transform .45s cubic-bezier(.3,1.6,.5,1) .75s}
+.js .conclusao.visto .ponto{transform:none}
+.js .elevel-texto div{opacity:0;transform:translateY(16px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.js .elevel-texto.visto div{opacity:1;transform:none}
+@media (max-width:959px){
+  .crenca{font-size:10.4vw;line-height:.96}
+  .crenca .seg{display:block}
+  .conclusao{font-size:15vw;margin-top:var(--s-7)}
+  .conclusao .m.c1{padding-left:14%}
+  .elevel-texto{display:block;margin-top:var(--s-7)}
+  .elevel-texto p{font-size:1.0625rem}
+}
+
+/* =========================================================
+   8. CONTATO · último gesto comercial
+   ========================================================= */
+.contato{padding-block:var(--secao-y) clamp(4rem,8vw,7rem)}
+.contato-tit{margin-top:var(--s-5);font-size:clamp(4rem,11.5vw,12.5rem);font-weight:var(--fw-bold);letter-spacing:-.06em;line-height:.82;text-transform:uppercase}
+.contato-tit > span{display:block}
+.contato-tit > span + span{padding-left:.6em}
+.contato-tit .ponto{letter-spacing:0}
+.contato-base{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gutter);row-gap:var(--s-7);align-items:end;margin-top:clamp(3.5rem,7vw,6rem)}
+.contato-acao{grid-column:1/7;display:flex;flex-direction:column;align-items:flex-start;gap:var(--s-6)}
+.contato-txt{font-size:clamp(1.25rem,1.9vw,1.75rem);line-height:1.3;font-weight:var(--fw-medium);letter-spacing:-.015em;max-width:24ch}
+.contato-canais{grid-column:9/-1;border-top:1px solid var(--linha)}
+.contato-canais li{display:flex;justify-content:space-between;align-items:baseline;gap:var(--s-4);padding:var(--s-4) 0;border-bottom:1px solid var(--linha)}
+.contato-canais .rotulo{flex:none}
+.contato-canais a{text-decoration:none;font-weight:var(--fw-medium);overflow-wrap:anywhere;text-align:right}
+.contato-canais a:hover{color:var(--c-laranja)}
+@media (max-width:959px){
+  .contato-tit{font-size:14vw}
+  .contato-tit > span + span{padding-left:0}
+  .contato-base{display:block;margin-top:var(--s-7)}
+  .contato-acao{align-items:stretch}
+  .contato-acao .btn{justify-content:space-between;min-height:56px}
+  .contato-canais{margin-top:var(--s-8)}
+}
+
+/* ---------- footer ---------- */
+.footer{border-top:1px solid var(--linha-escura);padding-block:var(--s-8) calc(var(--s-6) + env(safe-area-inset-bottom,0px));font-size:var(--fs-small)}
+.footer-grid{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,3fr) minmax(0,3fr);gap:var(--s-7) var(--gutter);align-items:start}
+.footer ul{display:flex;flex-direction:column;gap:var(--s-2)}
+.footer a{text-decoration:none;color:rgba(255,255,255,.8)}
+.footer a:hover{color:var(--c-laranja)}
+.footer .logo{width:132px;color:var(--c-laranja)}
+.footer .desc{margin-top:var(--s-4);color:rgba(255,255,255,.6);max-width:32ch}
+.footer-base{margin-top:var(--s-8);padding-top:var(--s-5);border-top:1px solid var(--linha-escura);color:rgba(255,255,255,.5);font-size:var(--fs-label);letter-spacing:.04em}
+@media (max-width:959px){.footer-grid{grid-template-columns:1fr 1fr}.footer-marca{grid-column:1/-1}}
+
+/* Barra de ação mobile */
+/* WhatsApp flutuante: só no celular, aparece depois do Hero */
+.wa-fab{position:fixed;right:calc(16px + env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:40;display:none;align-items:center;justify-content:center;width:52px;height:52px;border-radius:50%;background:var(--c-grafite);color:var(--c-branco);border:1px solid rgba(255,255,255,.14);box-shadow:0 8px 22px -10px rgba(0,0,0,.55);text-decoration:none;opacity:0;transform:translateY(12px) scale(.92);pointer-events:none;transition:opacity var(--dur-3) var(--ease),transform var(--dur-3) var(--ease),background var(--dur-2) var(--ease)}
+.wa-fab svg{width:24px;height:24px}
+.wa-fab.visivel{opacity:1;transform:none;pointer-events:auto}
+.wa-fab:active{background:var(--c-cinza-800)}
+.wa-fab:focus-visible{outline:2px solid var(--c-laranja);outline-offset:3px}
+.menu-aberto .wa-fab{opacity:0;pointer-events:none}
+@media (max-width:899px){.wa-fab{display:flex}}
+
+/* Revelação discreta (só depois do JS e fora da primeira dobra) */
+.js .revela{transition:opacity var(--dur-3) var(--ease),transform var(--dur-3) var(--ease)}
+.js .revela.espera{opacity:0;transform:translateY(24px)}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  .transicao{height:auto}
+  .transicao-fixa{position:static;height:auto;padding-block:var(--secao-y)}
+  .transicao .l1{opacity:.35}
+  .transicao .l2{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+<!-- ================= HEADER ================= -->
+<header class="header" id="header">
+  <div class="cont">
+    <a class="logo" href="#inicio" aria-label="Elevel, início"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="115.0 110.0 1430.8 432.9">
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 601.097656 304.703125 L 654.480469 304.703125 C 653.402344 287.535156 649.648438 275.191406 628.726562 275.191406 C 606.195312 275.191406 604.046875 285.925781 601.097656 304.703125 M 602.4375 335.011719 C 609.40625 361.296875 636.234375 362.910156 651.796875 362.910156 C 668.96875 362.910156 686.667969 361.835938 704.636719 358.621094 L 704.636719 398.324219 C 684.789062 402.882812 663.0625 404.492188 641.871094 404.492188 C 572.390625 404.492188 533.496094 378.203125 533.496094 319.988281 C 533.496094 266.875 562.199219 234.6875 628.1875 234.6875 C 687.207031 234.6875 714.570312 262.855469 714.570312 311.136719 C 714.570312 318.917969 714.027344 326.695312 712.957031 335.011719 Z M 602.4375 335.011719 "/>
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 749.777344 195.789062 L 824.890625 195.789062 L 824.890625 402.882812 L 749.777344 402.882812 Z M 749.777344 195.789062 "/>
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 916.363281 304.703125 L 969.75 304.703125 C 968.675781 287.535156 964.917969 275.191406 944 275.191406 C 921.460938 275.191406 919.316406 285.925781 916.363281 304.703125 M 917.707031 335.011719 C 924.679688 361.296875 951.507812 362.910156 967.0625 362.910156 C 984.234375 362.910156 1001.9375 361.835938 1019.90625 358.621094 L 1019.90625 398.324219 C 1000.058594 402.882812 978.332031 404.492188 957.140625 404.492188 C 887.660156 404.492188 848.765625 378.203125 848.765625 319.988281 C 848.765625 266.875 877.464844 234.6875 943.457031 234.6875 C 1002.476562 234.6875 1029.835938 262.855469 1029.835938 311.136719 C 1029.835938 318.917969 1029.300781 326.695312 1028.226562 335.011719 Z M 917.707031 335.011719 "/>
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 1144.921875 352.179688 C 1151.621094 325.625 1172.550781 262.585938 1179.785156 237.371094 L 1249.535156 237.371094 L 1184.890625 402.882812 L 1104.949219 402.882812 L 1040.835938 237.371094 L 1111.121094 237.371094 C 1120.507812 273.3125 1135.53125 312.484375 1144.921875 352.179688 "/>
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 1329.484375 304.703125 L 1382.867188 304.703125 C 1381.789062 287.535156 1378.03125 275.191406 1357.113281 275.191406 C 1334.578125 275.191406 1332.433594 285.925781 1329.484375 304.703125 M 1330.824219 335.011719 C 1337.792969 361.296875 1364.621094 362.910156 1380.183594 362.910156 C 1397.355469 362.910156 1415.054688 361.835938 1433.027344 358.621094 L 1433.027344 398.324219 C 1413.175781 402.882812 1391.449219 404.492188 1370.253906 404.492188 C 1300.777344 404.492188 1261.882812 378.203125 1261.882812 319.988281 C 1261.882812 266.875 1290.582031 234.6875 1356.574219 234.6875 C 1415.59375 234.6875 1442.953125 262.855469 1442.953125 311.136719 C 1442.953125 318.917969 1442.410156 326.695312 1441.34375 335.011719 Z M 1330.824219 335.011719 "/>
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 1466.289062 195.789062 L 1541.402344 195.789062 L 1541.402344 402.882812 L 1466.289062 402.882812 Z M 1466.289062 195.789062 "/>
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 454.007812 493.582031 C 454.007812 493.582031 387.09375 552.867188 299.683594 535.121094 C 235.605469 522.109375 146.746094 461.011719 163.578125 367.308594 C 180.808594 422.144531 288.914062 504.339844 410.804688 410.09375 "/>
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 319.179688 114.339844 C 300.976562 111.773438 235.6875 116.890625 184.023438 167.910156 C 129.070312 224.105469 91.980469 318.84375 144.648438 430.765625 C 136.449219 371.425781 178.207031 259.992188 323.085938 221.722656 C 332.742188 219.171875 362.667969 210.777344 362.582031 180.359375 C 363.652344 153.289062 355.507812 119.457031 319.179688 114.339844 "/>
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 378.851562 139.359375 C 378.851562 139.359375 485.617188 260.84375 315.230469 393.742188 C 271.054688 320.164062 260.035156 303.628906 260.035156 303.628906 C 260.035156 303.628906 404.320312 279.546875 378.851562 139.359375 "/>
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 1024.199219 508.019531 L 1024.199219 451.613281 L 1039.1875 451.613281 L 1053.328125 485.304688 L 1054.71875 485.304688 L 1068.78125 451.613281 L 1084 451.613281 L 1084 508.019531 L 1073.109375 508.019531 L 1073.109375 459.882812 L 1074.5 460.035156 L 1059.277344 496.507812 L 1048.074219 496.507812 L 1032.777344 460.035156 L 1034.242188 459.882812 L 1034.242188 508.019531 Z M 1024.199219 508.019531 "/>
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 1098.066406 451.613281 L 1109.035156 451.613281 L 1109.035156 508.019531 L 1098.066406 508.019531 Z M 1097.679688 447.285156 L 1107.414062 433.84375 L 1119.160156 433.84375 L 1107.800781 447.285156 Z M 1097.679688 447.285156 "/>
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 1132.523438 508.328125 L 1132.523438 498.128906 L 1144.191406 498.128906 C 1147.128906 498.128906 1149.742188 497.679688 1152.035156 496.777344 C 1154.324219 495.875 1156.273438 494.601562 1157.867188 492.953125 C 1159.464844 491.304688 1160.6875 489.359375 1161.539062 487.117188 C 1162.390625 484.878906 1162.816406 482.394531 1162.816406 479.660156 C 1162.816406 476.828125 1162.390625 474.292969 1161.539062 472.050781 C 1160.6875 469.808594 1159.464844 467.890625 1157.867188 466.292969 C 1156.273438 464.699219 1154.324219 463.488281 1152.035156 462.664062 C 1149.742188 461.839844 1147.128906 461.425781 1144.191406 461.425781 L 1132.523438 461.425781 L 1132.523438 451.226562 L 1143.496094 451.226562 C 1148.597656 451.226562 1153.050781 451.976562 1156.863281 453.46875 C 1160.675781 454.960938 1163.84375 457.011719 1166.367188 459.609375 C 1168.890625 462.210938 1170.785156 465.175781 1172.046875 468.496094 C 1173.308594 471.820312 1173.9375 475.257812 1173.9375 478.8125 L 1173.9375 480.511719 C 1173.9375 483.910156 1173.308594 487.261719 1172.046875 490.554688 C 1170.785156 493.851562 1168.890625 496.839844 1166.367188 499.519531 C 1163.84375 502.199219 1160.675781 504.335938 1156.863281 505.933594 C 1153.050781 507.527344 1148.597656 508.328125 1143.496094 508.328125 Z M 1123.097656 451.226562 L 1134.070312 451.226562 L 1134.070312 508.328125 L 1123.097656 508.328125 Z M 1123.097656 451.226562 "/>
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 1183.90625 451.613281 L 1194.878906 451.613281 L 1194.878906 508.019531 L 1183.90625 508.019531 Z M 1183.90625 451.613281 "/>
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 1216.820312 493.027344 L 1220.296875 483.757812 L 1243.167969 483.757812 L 1246.570312 493.027344 Z M 1203.378906 508.019531 L 1222.613281 451.613281 L 1240.542969 451.613281 L 1260.320312 508.019531 L 1249.042969 508.019531 L 1232.273438 459.109375 L 1236.214844 460.808594 L 1226.558594 460.808594 L 1230.574219 459.109375 L 1214.347656 508.019531 Z M 1203.378906 508.019531 "/>
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 1294.78125 508.328125 L 1294.78125 498.128906 L 1306.449219 498.128906 C 1309.386719 498.128906 1312 497.679688 1314.292969 496.777344 C 1316.582031 495.875 1318.527344 494.601562 1320.125 492.953125 C 1321.722656 491.304688 1322.945312 489.359375 1323.796875 487.117188 C 1324.644531 484.878906 1325.070312 482.394531 1325.070312 479.660156 C 1325.070312 476.828125 1324.644531 474.292969 1323.796875 472.050781 C 1322.945312 469.808594 1321.722656 467.890625 1320.125 466.292969 C 1318.527344 464.699219 1316.582031 463.488281 1314.292969 462.664062 C 1312 461.839844 1309.386719 461.425781 1306.449219 461.425781 L 1294.78125 461.425781 L 1294.78125 451.226562 L 1305.753906 451.226562 C 1310.851562 451.226562 1315.308594 451.976562 1319.121094 453.46875 C 1322.933594 454.960938 1326.101562 457.011719 1328.625 459.609375 C 1331.148438 462.210938 1333.039062 465.175781 1334.304688 468.496094 C 1335.5625 471.820312 1336.195312 475.257812 1336.195312 478.8125 L 1336.195312 480.511719 C 1336.195312 483.910156 1335.5625 487.261719 1334.304688 490.554688 C 1333.039062 493.851562 1331.148438 496.839844 1328.625 499.519531 C 1326.101562 502.199219 1322.933594 504.335938 1319.121094 505.933594 C 1315.308594 507.527344 1310.851562 508.328125 1305.753906 508.328125 Z M 1285.355469 451.226562 L 1296.328125 451.226562 L 1296.328125 508.328125 L 1285.355469 508.328125 Z M 1285.355469 451.226562 "/>
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 1372.511719 499.289062 C 1375.394531 499.289062 1377.984375 498.773438 1380.277344 497.742188 C 1382.566406 496.710938 1384.527344 495.28125 1386.148438 493.453125 C 1387.773438 491.625 1389.007812 489.539062 1389.859375 487.195312 C 1390.707031 484.851562 1391.132812 482.367188 1391.132812 479.738281 C 1391.132812 476.90625 1390.707031 474.304688 1389.859375 471.933594 C 1389.007812 469.566406 1387.773438 467.503906 1386.148438 465.753906 C 1384.527344 464.003906 1382.554688 462.636719 1380.238281 461.660156 C 1377.921875 460.679688 1375.34375 460.191406 1372.511719 460.191406 C 1369.625 460.191406 1367.023438 460.679688 1364.707031 461.660156 C 1362.390625 462.636719 1360.417969 464.003906 1358.796875 465.753906 C 1357.175781 467.503906 1355.9375 469.566406 1355.089844 471.933594 C 1354.238281 474.304688 1353.8125 476.90625 1353.8125 479.738281 C 1353.8125 482.367188 1354.238281 484.851562 1355.089844 487.195312 C 1355.9375 489.539062 1357.175781 491.625 1358.796875 493.453125 C 1360.417969 495.28125 1362.390625 496.710938 1364.707031 497.742188 C 1367.023438 498.773438 1369.625 499.289062 1372.511719 499.289062 M 1372.511719 509.488281 C 1367.414062 509.488281 1362.996094 508.585938 1359.257812 506.78125 C 1355.523438 504.980469 1352.433594 502.621094 1349.988281 499.710938 C 1347.542969 496.804688 1345.714844 493.660156 1344.503906 490.285156 C 1343.292969 486.914062 1342.6875 483.652344 1342.6875 480.511719 L 1342.6875 478.8125 C 1342.6875 475.363281 1343.304688 471.921875 1344.542969 468.496094 C 1345.777344 465.070312 1347.644531 461.96875 1350.144531 459.1875 C 1352.640625 456.40625 1355.742188 454.175781 1359.453125 452.503906 C 1363.164062 450.828125 1367.515625 449.992188 1372.511719 449.992188 C 1377.457031 449.992188 1381.78125 450.828125 1385.492188 452.503906 C 1389.199219 454.175781 1392.304688 456.40625 1394.800781 459.1875 C 1397.300781 461.96875 1399.167969 465.070312 1400.40625 468.496094 C 1401.640625 471.921875 1402.257812 475.363281 1402.257812 478.8125 L 1402.257812 480.511719 C 1402.257812 483.652344 1401.652344 486.914062 1400.445312 490.285156 C 1399.234375 493.660156 1397.402344 496.804688 1394.957031 499.710938 C 1392.511719 502.621094 1389.417969 504.980469 1385.6875 506.78125 C 1381.949219 508.585938 1377.558594 509.488281 1372.511719 509.488281 "/>
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 1439.347656 499.289062 C 1442.230469 499.289062 1444.820312 498.773438 1447.113281 497.742188 C 1449.402344 496.710938 1451.363281 495.28125 1452.984375 493.453125 C 1454.609375 491.625 1455.84375 489.539062 1456.695312 487.195312 C 1457.542969 484.851562 1457.96875 482.367188 1457.96875 479.738281 C 1457.96875 476.90625 1457.542969 474.304688 1456.695312 471.933594 C 1455.84375 469.566406 1454.609375 467.503906 1452.984375 465.753906 C 1451.363281 464.003906 1449.390625 462.636719 1447.074219 461.660156 C 1444.753906 460.679688 1442.179688 460.191406 1439.347656 460.191406 C 1436.460938 460.191406 1433.859375 460.679688 1431.542969 461.660156 C 1429.226562 462.636719 1427.253906 464.003906 1425.632812 465.753906 C 1424.007812 467.503906 1422.773438 469.566406 1421.925781 471.933594 C 1421.074219 474.304688 1420.648438 476.90625 1420.648438 479.738281 C 1420.648438 482.367188 1421.074219 484.851562 1421.925781 487.195312 C 1422.773438 489.539062 1424.007812 491.625 1425.632812 493.453125 C 1427.253906 495.28125 1429.226562 496.710938 1431.542969 497.742188 C 1433.859375 498.773438 1436.460938 499.289062 1439.347656 499.289062 M 1439.347656 509.488281 C 1434.246094 509.488281 1429.832031 508.585938 1426.09375 506.78125 C 1422.359375 504.980469 1419.269531 502.621094 1416.824219 499.710938 C 1414.378906 496.804688 1412.546875 493.660156 1411.339844 490.285156 C 1410.125 486.914062 1409.523438 483.652344 1409.523438 480.511719 L 1409.523438 478.8125 C 1409.523438 475.363281 1410.140625 471.921875 1411.378906 468.496094 C 1412.613281 465.070312 1414.480469 461.96875 1416.980469 459.1875 C 1419.476562 456.40625 1422.578125 454.175781 1426.289062 452.503906 C 1430 450.828125 1434.351562 449.992188 1439.347656 449.992188 C 1444.292969 449.992188 1448.617188 450.828125 1452.328125 452.503906 C 1456.035156 454.175781 1459.136719 456.40625 1461.636719 459.1875 C 1464.136719 461.96875 1466.003906 465.070312 1467.242188 468.496094 C 1468.476562 471.921875 1469.09375 475.363281 1469.09375 478.8125 L 1469.09375 480.511719 C 1469.09375 483.652344 1468.488281 486.914062 1467.28125 490.285156 C 1466.070312 493.660156 1464.238281 496.804688 1461.792969 499.710938 C 1459.34375 502.621094 1456.253906 504.980469 1452.519531 506.78125 C 1448.785156 508.585938 1444.394531 509.488281 1439.347656 509.488281 "/>
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 1516.691406 451.613281 L 1527.664062 451.613281 L 1527.664062 508.019531 L 1516.691406 508.019531 Z M 1488.644531 474.949219 L 1518.699219 474.949219 L 1518.699219 484.605469 L 1488.644531 484.605469 Z M 1479.679688 451.613281 L 1490.652344 451.613281 L 1490.652344 508.019531 L 1479.679688 508.019531 Z M 1479.679688 451.613281 "/>
+</svg>
+</a>
+    <nav class="nav" aria-label="Principal">
+      <a href="#rede">Nossa Rede</a>
+      <a href="#presenca">Para Anunciantes</a>
+      <a href="#a-elevel">A Elevel</a>
+    </nav>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu-mobile" aria-label="Abrir menu"><span></span></button>
+  </div>
+</header>
+
+<div class="menu-mobile" id="menu-mobile" hidden>
+  <nav aria-label="Menu">
+    <a href="#rede" style="--i:0">Nossa Rede</a>
+    <a href="#presenca" style="--i:1">Para Anunciantes</a>
+    <a href="#a-elevel" style="--i:2">A Elevel</a>
+  </nav>
+  <div class="rodape-menu">
+    <div class="acoes">
+      <a class="btn btn-primario" href="#contato" data-track="cta_menu">Fale com a Elevel <span class="seta">→</span></a>
+      <a class="btn btn-contorno js-whatsapp" href="https://wa.me/5562981260469?text=Ol%C3%A1%21%20Conheci%20a%20Elevel%20pelo%20site%20e%20gostaria%20de%20informa%C3%A7%C3%B5es%20para%20anunciar%20na%20rede." target="_blank" rel="noopener" data-track="whatsapp_menu">WhatsApp <span class="seta">→</span></a>
+    </div>
+    <div class="info"><span>Goiânia · GO</span><a href="https://www.instagram.com/elevelmidias/" target="_blank" rel="noopener">@elevelmidias</a></div>
+  </div>
+</div>
+
+<main id="conteudo">
+
+<!-- ================= 1. HERO ================= -->
+<section class="hero tema-escuro" id="inicio" aria-label="Abertura Elevel">
+  <div class="hero-midia" id="hero-midia" aria-hidden="true">
+    <!-- Fase 1: motion tipográfico. Quando data/elevel.json → hero.video for preenchido, o filme entra aqui no lugar do motion. -->
+    <div class="motion" id="hero-motion"></div>
+  </div>
+  <h1 class="sr-only">Elevel. Sua marca nos lugares certos.</h1>
+  <p class="sr-only">Uma rede de mídia digital presente em ambientes estratégicos de Goiânia.</p>
+  <div class="hero-meta">
+    <div class="hero-loop" id="hero-loop">
+      <span class="trilho" aria-hidden="true"><b id="hero-trilho"></b></span>
+      <button class="pausar" type="button" id="hero-pausar" aria-label="Pausar animação de abertura" aria-pressed="false"><svg viewBox="0 0 12 12" fill="currentColor" aria-hidden="true"><rect x="2" y="1" width="3" height="10"/><rect x="7" y="1" width="3" height="10"/></svg></button>
+    </div>
+  </div>
+  <span class="rolar" aria-hidden="true"></span>
+</section>
+
+<!-- ================= 2. TRANSIÇÃO ================= -->
+<section class="transicao tema-escuro" id="transicao" aria-label="Posicionamento">
+  <div class="transicao-fixa">
+    <div class="cont">
+      <p class="l1">Não é sobre estar <s>em todo lugar</s>.</p>
+      <p class="l2">É sobre estar nos lugares certos<span class="ponto">.</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 3. ELEVEL EM NÚMEROS ================= -->
+<section class="escala tema-claro" id="numeros" aria-labelledby="numeros-t">
+  <div class="cont">
+    <h2 class="rotulo" id="numeros-t">Elevel em números</h2>
+
+    <div class="escala-bloco b1">
+      <p class="escala-tit">Escala é importante<span class="ponto">.</span></p>
+      <p class="escala-num" data-metrica="faces" data-preenche></p>
+      <p class="escala-rot" data-metrica-rotulo="faces"></p>
+    </div>
+
+    <div class="escala-bloco b2">
+      <p class="escala-tit">Contexto também<span class="ponto">.</span></p>
+      <p class="escala-num" data-metrica="impactos" data-preenche></p>
+      <p class="escala-rot" data-metrica-rotulo="impactos"></p>
+    </div>
+
+    <div class="escala-texto">
+      <p>Uma rede presente em ambientes selecionados de Goiânia, <span class="mudo">acompanhando diferentes momentos da rotina de um público ativo, conectado e em movimento.</span></p>
+    </div>
+  </div>
+  <div class="costura" id="costura" aria-hidden="true"></div>
+</section>
+
+<!-- ================= 4. FAZEMOS PARTE DA ROTINA ================= -->
+<section class="rotina tema-claro" id="rotina" aria-labelledby="rotina-t">
+  <div class="cont">
+    <h2 class="rotina-tit" id="rotina-t"><span>Fazemos parte</span> <span>da rotina de</span> <span>Goiânia<span class="ponto">.</span></span></h2>
+    <ol class="momentos" id="momentos" aria-label="Momentos da rotina"></ol>
+    <div class="onde">
+      <p class="onde-tit" aria-hidden="true">Onde<span class="ponto">?</span></p>
+      <div>
+        <p>Nos lugares que fazem parte dessa rotina. Conheça a rede Elevel, ponto a ponto.</p>
+        <a class="link-seta" href="#rede" data-track="rotina_onde">Explore a rede <span class="seta">↓</span></a>
+      </div>
+    </div>
+  </div>
+  <div class="costura" id="costura2" aria-hidden="true"></div>
+</section>
+
+<!-- ================= 5. NOSSA REDE (portfólio editorial, gerado a partir de data/elevel.json > pontos) ================= -->
+<section class="rede tema-claro" id="rede" aria-labelledby="rede-t">
+  <div class="cont">
+    <header class="rede-cab">
+      <div>
+        <p class="rotulo" id="rede-rotulo">Explore a rede</p>
+        <h2 class="rede-tit" id="rede-t">Nossa rede<span class="ponto">.</span></h2>
+      </div>
+      <div class="rede-intro">
+        <p class="rede-lead" id="rede-lead"></p>
+        <ol class="rede-indice" id="rede-indice" aria-label="Ativos da rede"></ol>
+      </div>
+    </header>
+    <div class="rede-ativos" id="rede-ativos"></div>
+    <div class="rede-fim" id="rede-fim"></div>
+  </div>
+</section>
+
+<!-- ================= 6. PARA ANUNCIANTES (copy e foto em data/elevel.json > anunciantes) ================= -->
+<section class="anunc tema-escuro" id="presenca" aria-labelledby="anunc-t">
+  <div class="cont">
+    <p class="rotulo" id="anunc-rotulo">Para anunciantes</p>
+    <h2 class="anunc-tit" id="anunc-t"></h2>
+    <div class="anunc-corpo">
+      <figure class="anunc-foto" id="anunc-foto"></figure>
+      <div class="anunc-texto">
+        <p class="anunc-intro" id="anunc-intro"></p>
+        <ol class="anunc-ideias" id="anunc-ideias"></ol>
+      </div>
+    </div>
+    <div class="anunc-sintese" id="anunc-sintese"></div>
+    <div class="anunc-cta">
+      <p class="anunc-pergunta" id="anunc-pergunta"></p>
+      <div class="anunc-acao">
+        <a class="btn btn-primario js-whatsapp evita-fab" id="anunc-btn" href="https://wa.me/5562981260469?text=Ol%C3%A1%21%20Conheci%20a%20Elevel%20pelo%20site%20e%20gostaria%20de%20informa%C3%A7%C3%B5es%20para%20anunciar%20na%20rede." target="_blank" rel="noopener" data-track="anunciantes_cta"><span id="anunc-btn-t">Fale com a Elevel</span> <span class="seta">→</span></a>
+        <p class="anunc-apoio" id="anunc-apoio"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= [A CONSTRUIR] MARCAS / PROVA COMERCIAL =================
+     Entra aqui, entre Para Anunciantes e A Elevel. Enquanto não existir, nada é exibido
+     e Para Anunciantes (preto) passa direto para A Elevel (claro). Não usar logos sem aprovação.
+     ============================================================================ -->
+
+<!-- ================= 7. A ELEVEL (copy em data/elevel.json > a_elevel) ================= -->
+<section class="elevel tema-claro" id="a-elevel" aria-labelledby="elevel-t">
+  <div class="cont">
+    <p class="rotulo" id="elevel-rotulo">A Elevel</p>
+    <h2 class="elevel-tit" id="elevel-t"><span class="crenca" id="elevel-crenca"></span><span class="conclusao" id="elevel-conclusao"></span></h2>
+    <div class="elevel-texto" id="elevel-texto"></div>
+  </div>
+</section>
+
+<!-- ================= 8. CONTATO ================= -->
+<section class="contato tema-escuro" id="contato" aria-labelledby="contato-t">
+  <div class="cont">
+    <p class="rotulo" id="contato-rotulo">Contato</p>
+    <h2 class="contato-tit" id="contato-t"><span>Vamos</span> <span>conversar<span class="ponto">?</span></span></h2>
+    <div class="contato-base">
+      <div class="contato-acao">
+        <p class="contato-txt" id="contato-txt">Para anunciar na rede Elevel, fale com nosso comercial.</p>
+        <a class="btn btn-primario js-whatsapp evita-fab" href="https://wa.me/5562981260469?text=Ol%C3%A1%21%20Conheci%20a%20Elevel%20pelo%20site%20e%20gostaria%20de%20informa%C3%A7%C3%B5es%20para%20anunciar%20na%20rede." target="_blank" rel="noopener" data-track="contato_comercial" aria-label="Fale com a Elevel pelo WhatsApp (abre em nova aba)"><span id="contato-btn-t">Fale com a Elevel</span> <span class="seta">→</span></a>
+      </div>
+      <ul class="contato-canais" id="canais" aria-label="Outros canais"></ul>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer tema-escuro">
+  <div class="cont">
+    <div class="footer-grid">
+      <div class="footer-marca">
+        <a class="logo" href="#inicio" aria-label="Elevel, voltar ao início"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="115.0 110.0 1430.8 432.9">
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 601.097656 304.703125 L 654.480469 304.703125 C 653.402344 287.535156 649.648438 275.191406 628.726562 275.191406 C 606.195312 275.191406 604.046875 285.925781 601.097656 304.703125 M 602.4375 335.011719 C 609.40625 361.296875 636.234375 362.910156 651.796875 362.910156 C 668.96875 362.910156 686.667969 361.835938 704.636719 358.621094 L 704.636719 398.324219 C 684.789062 402.882812 663.0625 404.492188 641.871094 404.492188 C 572.390625 404.492188 533.496094 378.203125 533.496094 319.988281 C 533.496094 266.875 562.199219 234.6875 628.1875 234.6875 C 687.207031 234.6875 714.570312 262.855469 714.570312 311.136719 C 714.570312 318.917969 714.027344 326.695312 712.957031 335.011719 Z M 602.4375 335.011719 "/>
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 749.777344 195.789062 L 824.890625 195.789062 L 824.890625 402.882812 L 749.777344 402.882812 Z M 749.777344 195.789062 "/>
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 916.363281 304.703125 L 969.75 304.703125 C 968.675781 287.535156 964.917969 275.191406 944 275.191406 C 921.460938 275.191406 919.316406 285.925781 916.363281 304.703125 M 917.707031 335.011719 C 924.679688 361.296875 951.507812 362.910156 967.0625 362.910156 C 984.234375 362.910156 1001.9375 361.835938 1019.90625 358.621094 L 1019.90625 398.324219 C 1000.058594 402.882812 978.332031 404.492188 957.140625 404.492188 C 887.660156 404.492188 848.765625 378.203125 848.765625 319.988281 C 848.765625 266.875 877.464844 234.6875 943.457031 234.6875 C 1002.476562 234.6875 1029.835938 262.855469 1029.835938 311.136719 C 1029.835938 318.917969 1029.300781 326.695312 1028.226562 335.011719 Z M 917.707031 335.011719 "/>
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 1144.921875 352.179688 C 1151.621094 325.625 1172.550781 262.585938 1179.785156 237.371094 L 1249.535156 237.371094 L 1184.890625 402.882812 L 1104.949219 402.882812 L 1040.835938 237.371094 L 1111.121094 237.371094 C 1120.507812 273.3125 1135.53125 312.484375 1144.921875 352.179688 "/>
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 1329.484375 304.703125 L 1382.867188 304.703125 C 1381.789062 287.535156 1378.03125 275.191406 1357.113281 275.191406 C 1334.578125 275.191406 1332.433594 285.925781 1329.484375 304.703125 M 1330.824219 335.011719 C 1337.792969 361.296875 1364.621094 362.910156 1380.183594 362.910156 C 1397.355469 362.910156 1415.054688 361.835938 1433.027344 358.621094 L 1433.027344 398.324219 C 1413.175781 402.882812 1391.449219 404.492188 1370.253906 404.492188 C 1300.777344 404.492188 1261.882812 378.203125 1261.882812 319.988281 C 1261.882812 266.875 1290.582031 234.6875 1356.574219 234.6875 C 1415.59375 234.6875 1442.953125 262.855469 1442.953125 311.136719 C 1442.953125 318.917969 1442.410156 326.695312 1441.34375 335.011719 Z M 1330.824219 335.011719 "/>
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 1466.289062 195.789062 L 1541.402344 195.789062 L 1541.402344 402.882812 L 1466.289062 402.882812 Z M 1466.289062 195.789062 "/>
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 454.007812 493.582031 C 454.007812 493.582031 387.09375 552.867188 299.683594 535.121094 C 235.605469 522.109375 146.746094 461.011719 163.578125 367.308594 C 180.808594 422.144531 288.914062 504.339844 410.804688 410.09375 "/>
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 319.179688 114.339844 C 300.976562 111.773438 235.6875 116.890625 184.023438 167.910156 C 129.070312 224.105469 91.980469 318.84375 144.648438 430.765625 C 136.449219 371.425781 178.207031 259.992188 323.085938 221.722656 C 332.742188 219.171875 362.667969 210.777344 362.582031 180.359375 C 363.652344 153.289062 355.507812 119.457031 319.179688 114.339844 "/>
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 378.851562 139.359375 C 378.851562 139.359375 485.617188 260.84375 315.230469 393.742188 C 271.054688 320.164062 260.035156 303.628906 260.035156 303.628906 C 260.035156 303.628906 404.320312 279.546875 378.851562 139.359375 "/>
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 1024.199219 508.019531 L 1024.199219 451.613281 L 1039.1875 451.613281 L 1053.328125 485.304688 L 1054.71875 485.304688 L 1068.78125 451.613281 L 1084 451.613281 L 1084 508.019531 L 1073.109375 508.019531 L 1073.109375 459.882812 L 1074.5 460.035156 L 1059.277344 496.507812 L 1048.074219 496.507812 L 1032.777344 460.035156 L 1034.242188 459.882812 L 1034.242188 508.019531 Z M 1024.199219 508.019531 "/>
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 1098.066406 451.613281 L 1109.035156 451.613281 L 1109.035156 508.019531 L 1098.066406 508.019531 Z M 1097.679688 447.285156 L 1107.414062 433.84375 L 1119.160156 433.84375 L 1107.800781 447.285156 Z M 1097.679688 447.285156 "/>
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 1132.523438 508.328125 L 1132.523438 498.128906 L 1144.191406 498.128906 C 1147.128906 498.128906 1149.742188 497.679688 1152.035156 496.777344 C 1154.324219 495.875 1156.273438 494.601562 1157.867188 492.953125 C 1159.464844 491.304688 1160.6875 489.359375 1161.539062 487.117188 C 1162.390625 484.878906 1162.816406 482.394531 1162.816406 479.660156 C 1162.816406 476.828125 1162.390625 474.292969 1161.539062 472.050781 C 1160.6875 469.808594 1159.464844 467.890625 1157.867188 466.292969 C 1156.273438 464.699219 1154.324219 463.488281 1152.035156 462.664062 C 1149.742188 461.839844 1147.128906 461.425781 1144.191406 461.425781 L 1132.523438 461.425781 L 1132.523438 451.226562 L 1143.496094 451.226562 C 1148.597656 451.226562 1153.050781 451.976562 1156.863281 453.46875 C 1160.675781 454.960938 1163.84375 457.011719 1166.367188 459.609375 C 1168.890625 462.210938 1170.785156 465.175781 1172.046875 468.496094 C 1173.308594 471.820312 1173.9375 475.257812 1173.9375 478.8125 L 1173.9375 480.511719 C 1173.9375 483.910156 1173.308594 487.261719 1172.046875 490.554688 C 1170.785156 493.851562 1168.890625 496.839844 1166.367188 499.519531 C 1163.84375 502.199219 1160.675781 504.335938 1156.863281 505.933594 C 1153.050781 507.527344 1148.597656 508.328125 1143.496094 508.328125 Z M 1123.097656 451.226562 L 1134.070312 451.226562 L 1134.070312 508.328125 L 1123.097656 508.328125 Z M 1123.097656 451.226562 "/>
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 1183.90625 451.613281 L 1194.878906 451.613281 L 1194.878906 508.019531 L 1183.90625 508.019531 Z M 1183.90625 451.613281 "/>
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 1216.820312 493.027344 L 1220.296875 483.757812 L 1243.167969 483.757812 L 1246.570312 493.027344 Z M 1203.378906 508.019531 L 1222.613281 451.613281 L 1240.542969 451.613281 L 1260.320312 508.019531 L 1249.042969 508.019531 L 1232.273438 459.109375 L 1236.214844 460.808594 L 1226.558594 460.808594 L 1230.574219 459.109375 L 1214.347656 508.019531 Z M 1203.378906 508.019531 "/>
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 1294.78125 508.328125 L 1294.78125 498.128906 L 1306.449219 498.128906 C 1309.386719 498.128906 1312 497.679688 1314.292969 496.777344 C 1316.582031 495.875 1318.527344 494.601562 1320.125 492.953125 C 1321.722656 491.304688 1322.945312 489.359375 1323.796875 487.117188 C 1324.644531 484.878906 1325.070312 482.394531 1325.070312 479.660156 C 1325.070312 476.828125 1324.644531 474.292969 1323.796875 472.050781 C 1322.945312 469.808594 1321.722656 467.890625 1320.125 466.292969 C 1318.527344 464.699219 1316.582031 463.488281 1314.292969 462.664062 C 1312 461.839844 1309.386719 461.425781 1306.449219 461.425781 L 1294.78125 461.425781 L 1294.78125 451.226562 L 1305.753906 451.226562 C 1310.851562 451.226562 1315.308594 451.976562 1319.121094 453.46875 C 1322.933594 454.960938 1326.101562 457.011719 1328.625 459.609375 C 1331.148438 462.210938 1333.039062 465.175781 1334.304688 468.496094 C 1335.5625 471.820312 1336.195312 475.257812 1336.195312 478.8125 L 1336.195312 480.511719 C 1336.195312 483.910156 1335.5625 487.261719 1334.304688 490.554688 C 1333.039062 493.851562 1331.148438 496.839844 1328.625 499.519531 C 1326.101562 502.199219 1322.933594 504.335938 1319.121094 505.933594 C 1315.308594 507.527344 1310.851562 508.328125 1305.753906 508.328125 Z M 1285.355469 451.226562 L 1296.328125 451.226562 L 1296.328125 508.328125 L 1285.355469 508.328125 Z M 1285.355469 451.226562 "/>
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 1372.511719 499.289062 C 1375.394531 499.289062 1377.984375 498.773438 1380.277344 497.742188 C 1382.566406 496.710938 1384.527344 495.28125 1386.148438 493.453125 C 1387.773438 491.625 1389.007812 489.539062 1389.859375 487.195312 C 1390.707031 484.851562 1391.132812 482.367188 1391.132812 479.738281 C 1391.132812 476.90625 1390.707031 474.304688 1389.859375 471.933594 C 1389.007812 469.566406 1387.773438 467.503906 1386.148438 465.753906 C 1384.527344 464.003906 1382.554688 462.636719 1380.238281 461.660156 C 1377.921875 460.679688 1375.34375 460.191406 1372.511719 460.191406 C 1369.625 460.191406 1367.023438 460.679688 1364.707031 461.660156 C 1362.390625 462.636719 1360.417969 464.003906 1358.796875 465.753906 C 1357.175781 467.503906 1355.9375 469.566406 1355.089844 471.933594 C 1354.238281 474.304688 1353.8125 476.90625 1353.8125 479.738281 C 1353.8125 482.367188 1354.238281 484.851562 1355.089844 487.195312 C 1355.9375 489.539062 1357.175781 491.625 1358.796875 493.453125 C 1360.417969 495.28125 1362.390625 496.710938 1364.707031 497.742188 C 1367.023438 498.773438 1369.625 499.289062 1372.511719 499.289062 M 1372.511719 509.488281 C 1367.414062 509.488281 1362.996094 508.585938 1359.257812 506.78125 C 1355.523438 504.980469 1352.433594 502.621094 1349.988281 499.710938 C 1347.542969 496.804688 1345.714844 493.660156 1344.503906 490.285156 C 1343.292969 486.914062 1342.6875 483.652344 1342.6875 480.511719 L 1342.6875 478.8125 C 1342.6875 475.363281 1343.304688 471.921875 1344.542969 468.496094 C 1345.777344 465.070312 1347.644531 461.96875 1350.144531 459.1875 C 1352.640625 456.40625 1355.742188 454.175781 1359.453125 452.503906 C 1363.164062 450.828125 1367.515625 449.992188 1372.511719 449.992188 C 1377.457031 449.992188 1381.78125 450.828125 1385.492188 452.503906 C 1389.199219 454.175781 1392.304688 456.40625 1394.800781 459.1875 C 1397.300781 461.96875 1399.167969 465.070312 1400.40625 468.496094 C 1401.640625 471.921875 1402.257812 475.363281 1402.257812 478.8125 L 1402.257812 480.511719 C 1402.257812 483.652344 1401.652344 486.914062 1400.445312 490.285156 C 1399.234375 493.660156 1397.402344 496.804688 1394.957031 499.710938 C 1392.511719 502.621094 1389.417969 504.980469 1385.6875 506.78125 C 1381.949219 508.585938 1377.558594 509.488281 1372.511719 509.488281 "/>
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 1439.347656 499.289062 C 1442.230469 499.289062 1444.820312 498.773438 1447.113281 497.742188 C 1449.402344 496.710938 1451.363281 495.28125 1452.984375 493.453125 C 1454.609375 491.625 1455.84375 489.539062 1456.695312 487.195312 C 1457.542969 484.851562 1457.96875 482.367188 1457.96875 479.738281 C 1457.96875 476.90625 1457.542969 474.304688 1456.695312 471.933594 C 1455.84375 469.566406 1454.609375 467.503906 1452.984375 465.753906 C 1451.363281 464.003906 1449.390625 462.636719 1447.074219 461.660156 C 1444.753906 460.679688 1442.179688 460.191406 1439.347656 460.191406 C 1436.460938 460.191406 1433.859375 460.679688 1431.542969 461.660156 C 1429.226562 462.636719 1427.253906 464.003906 1425.632812 465.753906 C 1424.007812 467.503906 1422.773438 469.566406 1421.925781 471.933594 C 1421.074219 474.304688 1420.648438 476.90625 1420.648438 479.738281 C 1420.648438 482.367188 1421.074219 484.851562 1421.925781 487.195312 C 1422.773438 489.539062 1424.007812 491.625 1425.632812 493.453125 C 1427.253906 495.28125 1429.226562 496.710938 1431.542969 497.742188 C 1433.859375 498.773438 1436.460938 499.289062 1439.347656 499.289062 M 1439.347656 509.488281 C 1434.246094 509.488281 1429.832031 508.585938 1426.09375 506.78125 C 1422.359375 504.980469 1419.269531 502.621094 1416.824219 499.710938 C 1414.378906 496.804688 1412.546875 493.660156 1411.339844 490.285156 C 1410.125 486.914062 1409.523438 483.652344 1409.523438 480.511719 L 1409.523438 478.8125 C 1409.523438 475.363281 1410.140625 471.921875 1411.378906 468.496094 C 1412.613281 465.070312 1414.480469 461.96875 1416.980469 459.1875 C 1419.476562 456.40625 1422.578125 454.175781 1426.289062 452.503906 C 1430 450.828125 1434.351562 449.992188 1439.347656 449.992188 C 1444.292969 449.992188 1448.617188 450.828125 1452.328125 452.503906 C 1456.035156 454.175781 1459.136719 456.40625 1461.636719 459.1875 C 1464.136719 461.96875 1466.003906 465.070312 1467.242188 468.496094 C 1468.476562 471.921875 1469.09375 475.363281 1469.09375 478.8125 L 1469.09375 480.511719 C 1469.09375 483.652344 1468.488281 486.914062 1467.28125 490.285156 C 1466.070312 493.660156 1464.238281 496.804688 1461.792969 499.710938 C 1459.34375 502.621094 1456.253906 504.980469 1452.519531 506.78125 C 1448.785156 508.585938 1444.394531 509.488281 1439.347656 509.488281 "/>
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 1516.691406 451.613281 L 1527.664062 451.613281 L 1527.664062 508.019531 L 1516.691406 508.019531 Z M 1488.644531 474.949219 L 1518.699219 474.949219 L 1518.699219 484.605469 L 1488.644531 484.605469 Z M 1479.679688 451.613281 L 1490.652344 451.613281 L 1490.652344 508.019531 L 1479.679688 508.019531 Z M 1479.679688 451.613281 "/>
+</svg>
+</a>
+        <p class="desc">Rede de mídia digital em ambientes selecionados de Goiânia.</p>
+      </div>
+      <nav aria-label="Rodapé"><ul>
+        <li><a href="#rede">Nossa Rede</a></li>
+        <li><a href="#presenca">Para Anunciantes</a></li>
+        <li><a href="#a-elevel">A Elevel</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul></nav>
+      <ul id="footer-redes"></ul>
+    </div>
+    <div class="footer-base">
+      <span>© <span id="ano">2026</span> Elevel Mídias · Goiânia, GO</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-fab js-whatsapp" id="wa-fab" href="https://wa.me/5562981260469?text=Ol%C3%A1%21%20Conheci%20a%20Elevel%20pelo%20site%20e%20gostaria%20de%20informa%C3%A7%C3%B5es%20para%20anunciar%20na%20rede." target="_blank" rel="noopener" aria-label="Falar com a Elevel pelo WhatsApp (abre em nova aba)" data-track="whatsapp_flutuante">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2.5a9.43 9.43 0 0 0-8.1 14.28L2.5 21.5l4.86-1.4A9.44 9.44 0 1 0 12.04 2.5Zm0 17.2a7.77 7.77 0 0 1-3.96-1.09l-.28-.17-2.88.83.84-2.8-.19-.29a7.78 7.78 0 1 1 6.47 3.52Zm4.27-5.82c-.23-.12-1.38-.68-1.6-.76-.21-.08-.37-.12-.53.12-.16.23-.61.76-.75.92-.14.16-.28.18-.51.06a6.38 6.38 0 0 1-3.19-2.79c-.24-.41.24-.38.69-1.27.08-.16.04-.29-.02-.41-.06-.12-.53-1.28-.73-1.75-.19-.46-.39-.39-.53-.4h-.45a.87.87 0 0 0-.63.29 2.65 2.65 0 0 0-.83 1.97 4.6 4.6 0 0 0 .97 2.45 10.53 10.53 0 0 0 4.03 3.56c1.5.65 2.09.7 2.84.59.46-.07 1.38-.56 1.58-1.11.2-.55.2-1.02.14-1.11-.06-.1-.22-.16-.45-.28Z"/></svg>
+</a>
+
+<template id="tpl-logo"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="115.0 110.0 1430.8 432.9">
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 601.097656 304.703125 L 654.480469 304.703125 C 653.402344 287.535156 649.648438 275.191406 628.726562 275.191406 C 606.195312 275.191406 604.046875 285.925781 601.097656 304.703125 M 602.4375 335.011719 C 609.40625 361.296875 636.234375 362.910156 651.796875 362.910156 C 668.96875 362.910156 686.667969 361.835938 704.636719 358.621094 L 704.636719 398.324219 C 684.789062 402.882812 663.0625 404.492188 641.871094 404.492188 C 572.390625 404.492188 533.496094 378.203125 533.496094 319.988281 C 533.496094 266.875 562.199219 234.6875 628.1875 234.6875 C 687.207031 234.6875 714.570312 262.855469 714.570312 311.136719 C 714.570312 318.917969 714.027344 326.695312 712.957031 335.011719 Z M 602.4375 335.011719 "/>
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 749.777344 195.789062 L 824.890625 195.789062 L 824.890625 402.882812 L 749.777344 402.882812 Z M 749.777344 195.789062 "/>
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 916.363281 304.703125 L 969.75 304.703125 C 968.675781 287.535156 964.917969 275.191406 944 275.191406 C 921.460938 275.191406 919.316406 285.925781 916.363281 304.703125 M 917.707031 335.011719 C 924.679688 361.296875 951.507812 362.910156 967.0625 362.910156 C 984.234375 362.910156 1001.9375 361.835938 1019.90625 358.621094 L 1019.90625 398.324219 C 1000.058594 402.882812 978.332031 404.492188 957.140625 404.492188 C 887.660156 404.492188 848.765625 378.203125 848.765625 319.988281 C 848.765625 266.875 877.464844 234.6875 943.457031 234.6875 C 1002.476562 234.6875 1029.835938 262.855469 1029.835938 311.136719 C 1029.835938 318.917969 1029.300781 326.695312 1028.226562 335.011719 Z M 917.707031 335.011719 "/>
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 1144.921875 352.179688 C 1151.621094 325.625 1172.550781 262.585938 1179.785156 237.371094 L 1249.535156 237.371094 L 1184.890625 402.882812 L 1104.949219 402.882812 L 1040.835938 237.371094 L 1111.121094 237.371094 C 1120.507812 273.3125 1135.53125 312.484375 1144.921875 352.179688 "/>
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 1329.484375 304.703125 L 1382.867188 304.703125 C 1381.789062 287.535156 1378.03125 275.191406 1357.113281 275.191406 C 1334.578125 275.191406 1332.433594 285.925781 1329.484375 304.703125 M 1330.824219 335.011719 C 1337.792969 361.296875 1364.621094 362.910156 1380.183594 362.910156 C 1397.355469 362.910156 1415.054688 361.835938 1433.027344 358.621094 L 1433.027344 398.324219 C 1413.175781 402.882812 1391.449219 404.492188 1370.253906 404.492188 C 1300.777344 404.492188 1261.882812 378.203125 1261.882812 319.988281 C 1261.882812 266.875 1290.582031 234.6875 1356.574219 234.6875 C 1415.59375 234.6875 1442.953125 262.855469 1442.953125 311.136719 C 1442.953125 318.917969 1442.410156 326.695312 1441.34375 335.011719 Z M 1330.824219 335.011719 "/>
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 1466.289062 195.789062 L 1541.402344 195.789062 L 1541.402344 402.882812 L 1466.289062 402.882812 Z M 1466.289062 195.789062 "/>
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 454.007812 493.582031 C 454.007812 493.582031 387.09375 552.867188 299.683594 535.121094 C 235.605469 522.109375 146.746094 461.011719 163.578125 367.308594 C 180.808594 422.144531 288.914062 504.339844 410.804688 410.09375 "/>
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 319.179688 114.339844 C 300.976562 111.773438 235.6875 116.890625 184.023438 167.910156 C 129.070312 224.105469 91.980469 318.84375 144.648438 430.765625 C 136.449219 371.425781 178.207031 259.992188 323.085938 221.722656 C 332.742188 219.171875 362.667969 210.777344 362.582031 180.359375 C 363.652344 153.289062 355.507812 119.457031 319.179688 114.339844 "/>
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 378.851562 139.359375 C 378.851562 139.359375 485.617188 260.84375 315.230469 393.742188 C 271.054688 320.164062 260.035156 303.628906 260.035156 303.628906 C 260.035156 303.628906 404.320312 279.546875 378.851562 139.359375 "/>
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 1024.199219 508.019531 L 1024.199219 451.613281 L 1039.1875 451.613281 L 1053.328125 485.304688 L 1054.71875 485.304688 L 1068.78125 451.613281 L 1084 451.613281 L 1084 508.019531 L 1073.109375 508.019531 L 1073.109375 459.882812 L 1074.5 460.035156 L 1059.277344 496.507812 L 1048.074219 496.507812 L 1032.777344 460.035156 L 1034.242188 459.882812 L 1034.242188 508.019531 Z M 1024.199219 508.019531 "/>
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 1098.066406 451.613281 L 1109.035156 451.613281 L 1109.035156 508.019531 L 1098.066406 508.019531 Z M 1097.679688 447.285156 L 1107.414062 433.84375 L 1119.160156 433.84375 L 1107.800781 447.285156 Z M 1097.679688 447.285156 "/>
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 1132.523438 508.328125 L 1132.523438 498.128906 L 1144.191406 498.128906 C 1147.128906 498.128906 1149.742188 497.679688 1152.035156 496.777344 C 1154.324219 495.875 1156.273438 494.601562 1157.867188 492.953125 C 1159.464844 491.304688 1160.6875 489.359375 1161.539062 487.117188 C 1162.390625 484.878906 1162.816406 482.394531 1162.816406 479.660156 C 1162.816406 476.828125 1162.390625 474.292969 1161.539062 472.050781 C 1160.6875 469.808594 1159.464844 467.890625 1157.867188 466.292969 C 1156.273438 464.699219 1154.324219 463.488281 1152.035156 462.664062 C 1149.742188 461.839844 1147.128906 461.425781 1144.191406 461.425781 L 1132.523438 461.425781 L 1132.523438 451.226562 L 1143.496094 451.226562 C 1148.597656 451.226562 1153.050781 451.976562 1156.863281 453.46875 C 1160.675781 454.960938 1163.84375 457.011719 1166.367188 459.609375 C 1168.890625 462.210938 1170.785156 465.175781 1172.046875 468.496094 C 1173.308594 471.820312 1173.9375 475.257812 1173.9375 478.8125 L 1173.9375 480.511719 C 1173.9375 483.910156 1173.308594 487.261719 1172.046875 490.554688 C 1170.785156 493.851562 1168.890625 496.839844 1166.367188 499.519531 C 1163.84375 502.199219 1160.675781 504.335938 1156.863281 505.933594 C 1153.050781 507.527344 1148.597656 508.328125 1143.496094 508.328125 Z M 1123.097656 451.226562 L 1134.070312 451.226562 L 1134.070312 508.328125 L 1123.097656 508.328125 Z M 1123.097656 451.226562 "/>
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 1183.90625 451.613281 L 1194.878906 451.613281 L 1194.878906 508.019531 L 1183.90625 508.019531 Z M 1183.90625 451.613281 "/>
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 1216.820312 493.027344 L 1220.296875 483.757812 L 1243.167969 483.757812 L 1246.570312 493.027344 Z M 1203.378906 508.019531 L 1222.613281 451.613281 L 1240.542969 451.613281 L 1260.320312 508.019531 L 1249.042969 508.019531 L 1232.273438 459.109375 L 1236.214844 460.808594 L 1226.558594 460.808594 L 1230.574219 459.109375 L 1214.347656 508.019531 Z M 1203.378906 508.019531 "/>
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 1294.78125 508.328125 L 1294.78125 498.128906 L 1306.449219 498.128906 C 1309.386719 498.128906 1312 497.679688 1314.292969 496.777344 C 1316.582031 495.875 1318.527344 494.601562 1320.125 492.953125 C 1321.722656 491.304688 1322.945312 489.359375 1323.796875 487.117188 C 1324.644531 484.878906 1325.070312 482.394531 1325.070312 479.660156 C 1325.070312 476.828125 1324.644531 474.292969 1323.796875 472.050781 C 1322.945312 469.808594 1321.722656 467.890625 1320.125 466.292969 C 1318.527344 464.699219 1316.582031 463.488281 1314.292969 462.664062 C 1312 461.839844 1309.386719 461.425781 1306.449219 461.425781 L 1294.78125 461.425781 L 1294.78125 451.226562 L 1305.753906 451.226562 C 1310.851562 451.226562 1315.308594 451.976562 1319.121094 453.46875 C 1322.933594 454.960938 1326.101562 457.011719 1328.625 459.609375 C 1331.148438 462.210938 1333.039062 465.175781 1334.304688 468.496094 C 1335.5625 471.820312 1336.195312 475.257812 1336.195312 478.8125 L 1336.195312 480.511719 C 1336.195312 483.910156 1335.5625 487.261719 1334.304688 490.554688 C 1333.039062 493.851562 1331.148438 496.839844 1328.625 499.519531 C 1326.101562 502.199219 1322.933594 504.335938 1319.121094 505.933594 C 1315.308594 507.527344 1310.851562 508.328125 1305.753906 508.328125 Z M 1285.355469 451.226562 L 1296.328125 451.226562 L 1296.328125 508.328125 L 1285.355469 508.328125 Z M 1285.355469 451.226562 "/>
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 1372.511719 499.289062 C 1375.394531 499.289062 1377.984375 498.773438 1380.277344 497.742188 C 1382.566406 496.710938 1384.527344 495.28125 1386.148438 493.453125 C 1387.773438 491.625 1389.007812 489.539062 1389.859375 487.195312 C 1390.707031 484.851562 1391.132812 482.367188 1391.132812 479.738281 C 1391.132812 476.90625 1390.707031 474.304688 1389.859375 471.933594 C 1389.007812 469.566406 1387.773438 467.503906 1386.148438 465.753906 C 1384.527344 464.003906 1382.554688 462.636719 1380.238281 461.660156 C 1377.921875 460.679688 1375.34375 460.191406 1372.511719 460.191406 C 1369.625 460.191406 1367.023438 460.679688 1364.707031 461.660156 C 1362.390625 462.636719 1360.417969 464.003906 1358.796875 465.753906 C 1357.175781 467.503906 1355.9375 469.566406 1355.089844 471.933594 C 1354.238281 474.304688 1353.8125 476.90625 1353.8125 479.738281 C 1353.8125 482.367188 1354.238281 484.851562 1355.089844 487.195312 C 1355.9375 489.539062 1357.175781 491.625 1358.796875 493.453125 C 1360.417969 495.28125 1362.390625 496.710938 1364.707031 497.742188 C 1367.023438 498.773438 1369.625 499.289062 1372.511719 499.289062 M 1372.511719 509.488281 C 1367.414062 509.488281 1362.996094 508.585938 1359.257812 506.78125 C 1355.523438 504.980469 1352.433594 502.621094 1349.988281 499.710938 C 1347.542969 496.804688 1345.714844 493.660156 1344.503906 490.285156 C 1343.292969 486.914062 1342.6875 483.652344 1342.6875 480.511719 L 1342.6875 478.8125 C 1342.6875 475.363281 1343.304688 471.921875 1344.542969 468.496094 C 1345.777344 465.070312 1347.644531 461.96875 1350.144531 459.1875 C 1352.640625 456.40625 1355.742188 454.175781 1359.453125 452.503906 C 1363.164062 450.828125 1367.515625 449.992188 1372.511719 449.992188 C 1377.457031 449.992188 1381.78125 450.828125 1385.492188 452.503906 C 1389.199219 454.175781 1392.304688 456.40625 1394.800781 459.1875 C 1397.300781 461.96875 1399.167969 465.070312 1400.40625 468.496094 C 1401.640625 471.921875 1402.257812 475.363281 1402.257812 478.8125 L 1402.257812 480.511719 C 1402.257812 483.652344 1401.652344 486.914062 1400.445312 490.285156 C 1399.234375 493.660156 1397.402344 496.804688 1394.957031 499.710938 C 1392.511719 502.621094 1389.417969 504.980469 1385.6875 506.78125 C 1381.949219 508.585938 1377.558594 509.488281 1372.511719 509.488281 "/>
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 1439.347656 499.289062 C 1442.230469 499.289062 1444.820312 498.773438 1447.113281 497.742188 C 1449.402344 496.710938 1451.363281 495.28125 1452.984375 493.453125 C 1454.609375 491.625 1455.84375 489.539062 1456.695312 487.195312 C 1457.542969 484.851562 1457.96875 482.367188 1457.96875 479.738281 C 1457.96875 476.90625 1457.542969 474.304688 1456.695312 471.933594 C 1455.84375 469.566406 1454.609375 467.503906 1452.984375 465.753906 C 1451.363281 464.003906 1449.390625 462.636719 1447.074219 461.660156 C 1444.753906 460.679688 1442.179688 460.191406 1439.347656 460.191406 C 1436.460938 460.191406 1433.859375 460.679688 1431.542969 461.660156 C 1429.226562 462.636719 1427.253906 464.003906 1425.632812 465.753906 C 1424.007812 467.503906 1422.773438 469.566406 1421.925781 471.933594 C 1421.074219 474.304688 1420.648438 476.90625 1420.648438 479.738281 C 1420.648438 482.367188 1421.074219 484.851562 1421.925781 487.195312 C 1422.773438 489.539062 1424.007812 491.625 1425.632812 493.453125 C 1427.253906 495.28125 1429.226562 496.710938 1431.542969 497.742188 C 1433.859375 498.773438 1436.460938 499.289062 1439.347656 499.289062 M 1439.347656 509.488281 C 1434.246094 509.488281 1429.832031 508.585938 1426.09375 506.78125 C 1422.359375 504.980469 1419.269531 502.621094 1416.824219 499.710938 C 1414.378906 496.804688 1412.546875 493.660156 1411.339844 490.285156 C 1410.125 486.914062 1409.523438 483.652344 1409.523438 480.511719 L 1409.523438 478.8125 C 1409.523438 475.363281 1410.140625 471.921875 1411.378906 468.496094 C 1412.613281 465.070312 1414.480469 461.96875 1416.980469 459.1875 C 1419.476562 456.40625 1422.578125 454.175781 1426.289062 452.503906 C 1430 450.828125 1434.351562 449.992188 1439.347656 449.992188 C 1444.292969 449.992188 1448.617188 450.828125 1452.328125 452.503906 C 1456.035156 454.175781 1459.136719 456.40625 1461.636719 459.1875 C 1464.136719 461.96875 1466.003906 465.070312 1467.242188 468.496094 C 1468.476562 471.921875 1469.09375 475.363281 1469.09375 478.8125 L 1469.09375 480.511719 C 1469.09375 483.652344 1468.488281 486.914062 1467.28125 490.285156 C 1466.070312 493.660156 1464.238281 496.804688 1461.792969 499.710938 C 1459.34375 502.621094 1456.253906 504.980469 1452.519531 506.78125 C 1448.785156 508.585938 1444.394531 509.488281 1439.347656 509.488281 "/>
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 1516.691406 451.613281 L 1527.664062 451.613281 L 1527.664062 508.019531 L 1516.691406 508.019531 Z M 1488.644531 474.949219 L 1518.699219 474.949219 L 1518.699219 484.605469 L 1488.644531 484.605469 Z M 1479.679688 451.613281 L 1490.652344 451.613281 L 1490.652344 508.019531 L 1479.679688 508.019531 Z M 1479.679688 451.613281 "/>
+</svg>
+</template>
+<script type="application/json" id="dados-embutidos">{"contato": {"whatsapp": "5562981260469", "whatsapp_exibicao": "+55 62 98126-0469", "email": "bruno@elevelmidias.com.br", "instagram": "elevelmidias", "cidade": "Goiânia, GO", "whatsapp_mensagem": "Olá! Conheci a Elevel pelo site e gostaria de informações para anunciar na rede."}, "hero": {"video": {"desktop": null, "mobile": null, "poster": null}}, "metricas": [{"id": "faces", "numero": 60, "prefixo": "+", "sufixo": "", "rotulo": "Faces digitais"}, {"id": "impactos", "numero": 400, "prefixo": "+", "sufixo": " mil", "rotulo": "Impactos por mês"}], "rotina": [{"verbo": "Trabalhe", "ambiente": "Edifícios comerciais."}, {"verbo": "Treine", "ambiente": "Academias."}, {"verbo": "More", "ambiente": "Condomínios."}, {"verbo": "Viva", "ambiente": "Clubes."}, {"verbo": "Circule", "ambiente": "Shopping e outros ambientes."}], "pontos": [{"id": "orion", "nome": "Órion", "contexto": ["Comercial", "Shopping"], "contexto_provisorio": false, "faces": 20, "distribuicao": [{"faces": 14, "rotulo": "Torre"}, {"faces": 6, "rotulo": "Shopping"}], "copy": "Saúde, negócios e serviços em um dos grandes complexos empresariais de Goiânia. A Elevel está presente em diferentes momentos da circulação pelo Órion, com 20 faces digitais distribuídas entre a torre e o shopping.", "layout": "arquitetura-midia", "imagens": {"desktop": [{"base": "img/rede-orion-torre", "larguras": [906], "w": 906, "h": 714, "alt": "Torre do Órion vista de cima, com a cidade ao fundo", "legenda": "Torre"}, {"base": "img/rede-orion-elevador", "larguras": [800, 1600], "w": 4000, "h": 3000, "alt": "Tela digital Elevel sobre as portas de um elevador da torre do Órion", "legenda": "Torre · elevador"}, {"base": "img/rede-orion-totem", "larguras": [800, 1600], "w": 3000, "h": 4000, "alt": "Totem digital Elevel no piso do shopping do Órion", "legenda": "Shopping · totem digital"}], "mobile": [{"base": "img/rede-orion-torre", "larguras": [906], "w": 906, "h": 714, "alt": "Torre do Órion vista de cima, com a cidade ao fundo", "legenda": "Torre", "proporcao": "1/1", "foco": "40% 50%"}, {"base": "img/rede-orion-elevador", "larguras": [800, 1600], "w": 4000, "h": 3000, "alt": "Tela digital Elevel sobre as portas de um elevador da torre do Órion", "legenda": "Torre · elevador"}, {"base": "img/rede-orion-totem", "larguras": [800, 1600], "w": 3000, "h": 4000, "alt": "Totem digital Elevel no piso do shopping do Órion", "legenda": "Shopping · totem digital"}]}}, {"id": "arena-verano", "nome": "Arena Verano", "contexto": ["Esporte", "Lazer"], "contexto_provisorio": false, "faces": 10, "copy": "Esporte, gastronomia e convivência em um dos endereços mais relevantes do beach tennis em Goiânia. Com 10 faces digitais, a Elevel participa de um ambiente no Jardim Goiás em que treino, lazer e relacionamento acontecem no mesmo lugar.", "layout": "fachada-midia", "imagens": {"desktop": [{"base": "img/rede-verano-fachada", "larguras": [800, 1594], "w": 1594, "h": 1188, "alt": "Fachada da Arena Verano com as quadras de beach tennis ao lado", "legenda": "Fachada e quadras"}, {"base": "img/rede-verano-tela", "larguras": [800, 1600], "w": 3000, "h": 4000, "alt": "Tela digital Elevel em pilar da área do restaurante da Arena Verano", "legenda": "Restaurante e convivência"}], "mobile": [{"base": "img/rede-verano-fachada", "larguras": [800, 1594], "w": 1594, "h": 1188, "alt": "Fachada da Arena Verano com as quadras de beach tennis ao lado", "legenda": "Fachada e quadras"}, {"base": "img/rede-verano-tela", "larguras": [800, 1600], "w": 3000, "h": 4000, "alt": "Tela digital Elevel em pilar da área do restaurante da Arena Verano", "legenda": "Restaurante e convivência"}]}}, {"id": "jardins-verona", "nome": "Jardins Verona", "contexto": ["Residencial"], "contexto_provisorio": false, "faces": 8, "copy": "Qualidade de vida, lazer e rotina residencial em um dos condomínios de referência de Goiânia. Com 8 faces digitais, a Elevel está presente no dia a dia dos moradores, incluindo a academia do condomínio.", "layout": "arquitetura-detalhes", "imagens": {"desktop": [{"base": "img/rede-verona-fachada", "larguras": [800, 1600], "w": 1600, "h": 1200, "alt": "Fachada do Jardins Verona", "legenda": "Fachada"}, {"base": "img/rede-verona-academia", "larguras": [800, 1600], "w": 4000, "h": 3000, "alt": "Duas telas digitais Elevel na academia do Jardins Verona", "legenda": "Academia"}, {"base": "img/rede-verona-vertical", "larguras": [800, 1600], "w": 1714, "h": 2229, "alt": "Tela digital Elevel sobre o espelho da academia do Jardins Verona", "legenda": "Academia"}], "mobile": [{"base": "img/rede-verona-fachada", "larguras": [800, 1600], "w": 1600, "h": 1200, "alt": "Fachada do Jardins Verona", "legenda": "Fachada"}, {"base": "img/rede-verona-academia", "larguras": [800, 1600], "w": 4000, "h": 3000, "alt": "Duas telas digitais Elevel na academia do Jardins Verona", "legenda": "Academia"}, {"base": "img/rede-verona-vertical", "larguras": [800, 1600], "w": 1714, "h": 2229, "alt": "Tela digital Elevel sobre o espelho da academia do Jardins Verona", "legenda": "Academia"}]}}, {"id": "one-beaute", "nome": "One Beauté", "contexto": ["Beleza", "Bem-estar"], "contexto_provisorio": false, "faces": 20, "copy": "Beleza, cuidado e consumo em um ambiente inserido no Shopping Flamboyant. Com 20 faces digitais, a Elevel acompanha diferentes momentos da experiência no One Beauté, integrando a presença das marcas à rotina de atendimento do espaço.", "layout": "principal-secundaria", "imagens": {"desktop": [{"base": "img/rede-one-fachada", "larguras": [800, 1200], "w": 1200, "h": 1199, "alt": "Fachada do One Beauté no Shopping Flamboyant", "legenda": "Fachada · Shopping Flamboyant"}, {"base": "img/rede-one-recepcao", "larguras": [800, 1600, 2400], "w": 4000, "h": 3000, "alt": "Tela digital Elevel sobre a recepção do One Beauté", "legenda": "Recepção"}, {"base": "img/rede-one-salao", "larguras": [800, 1600], "w": 4000, "h": 3000, "alt": "Tela digital Elevel no salão do One Beauté", "legenda": "Salão"}], "mobile": [{"base": "img/rede-one-fachada", "larguras": [800, 1200], "w": 1200, "h": 1199, "alt": "Fachada do One Beauté no Shopping Flamboyant", "legenda": "Fachada · Shopping Flamboyant"}, {"base": "img/rede-one-recepcao", "larguras": [800, 1600, 2400], "w": 4000, "h": 3000, "alt": "Tela digital Elevel sobre a recepção do One Beauté", "legenda": "Recepção"}, {"base": "img/rede-one-salao", "larguras": [800, 1600], "w": 4000, "h": 3000, "alt": "Tela digital Elevel no salão do One Beauté", "legenda": "Salão"}]}}, {"id": "plaza-doro", "nome": "Plaza D'Oro", "contexto": ["Shopping", "Negócios"], "contexto_provisorio": false, "faces": 3, "copy": "Compras, serviços e negócios conectados à rotina da região Sudoeste. No Plaza D'Oro, a Elevel está presente com 3 faces digitais em um ambiente que reúne shopping de vizinhança e estrutura empresarial.", "layout": "compacto", "imagens": {"desktop": [{"base": "img/rede-plaza-fachada", "larguras": [800], "w": 800, "h": 533, "alt": "Fachada do Plaza D'Oro com a torre empresarial ao fundo", "legenda": "Fachada"}], "mobile": [{"base": "img/rede-plaza-fachada", "larguras": [800], "w": 800, "h": 533, "alt": "Fachada do Plaza D'Oro com a torre empresarial ao fundo", "legenda": "Fachada"}]}}], "marcas": [], "rede": {"rotulo": "Explore a rede", "titulo": "Nossa rede", "lead": "Cada ambiente tem um contexto próprio. É ele que dá valor à presença de uma marca.", "fechamento": "Presença, ponto a ponto", "layouts": ["arquitetura-midia", "fachada-midia", "arquitetura-detalhes", "principal-secundaria", "compacto"]}, "anunciantes": {"rotulo": "Para anunciantes", "titulo": [["Sua marca não precisa", "estar em todo lugar."], ["Precisa estar nos", "lugares certos."]], "intro": "A Elevel conecta marcas a pessoas em diferentes momentos da rotina, por meio de uma rede digital presente em ambientes selecionados de Goiânia.", "conceitos": [{"palavra": "Contexto", "texto": "Ambientes selecionados, onde a mensagem encontra o público em momentos reais da rotina."}, {"palavra": "Frequência", "texto": "Presença recorrente nos lugares onde as pessoas trabalham, moram, treinam, circulam e vivem."}, {"palavra": "Segmentação", "texto": "Campanhas construídas com os ambientes mais alinhados ao público e ao objetivo de cada marca."}, {"palavra": "Presença", "texto": "Mais do que exibir uma campanha, a Elevel coloca sua marca dentro da rotina de Goiânia.", "sintese": true}], "foto": {"base": "img/anunciantes-totem", "larguras": [800, 1600], "w": 2658, "h": 3572, "alt": "Totem digital Elevel exibindo campanha no piso do shopping do Órion, com pessoas circulando", "legenda": "Órion · totem digital no shopping"}, "cta": {"pergunta": ["Quer colocar sua marca", "nos lugares certos?"], "botao": "Fale com a Elevel", "apoio": "Para anunciantes diretos e agências."}}, "a_elevel": {"rotulo": "A Elevel", "crenca": ["A gente acredita", "que presença", "não é estar", "em todo lugar."], "risco": "em todo lugar", "conclusao": ["É estar", "no lugar certo."], "texto": ["A Elevel constrói sua rede com critério, escolhendo ambientes que acrescentam contexto e valor à presença das marcas.", "Porque uma rede relevante não é a que está em mais lugares. É a que escolhe bem onde estar."]}, "contato_secao": {"rotulo": "Contato", "titulo": ["Vamos", "conversar"], "texto": "Para anunciar na rede Elevel, fale com nosso comercial.", "botao": "Fale com a Elevel"}, "_versao": 1790804325}</script>
+<script>
+(function(){
+'use strict';
+document.documentElement.classList.add('js');
+var reduz = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var $ = function(s, c){ return (c||document).querySelector(s); };
+var $$ = function(s, c){ return Array.prototype.slice.call((c||document).querySelectorAll(s)); };
+function esc(t){ return String(t==null?'':t).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];}); }
+
+/* ---------- Analytics: fila pronta para GA4 / Meta / GTM ---------- */
+window.dataLayer = window.dataLayer || [];
+function track(evento, dados){ window.dataLayer.push(Object.assign({event: evento}, dados||{})); }
+document.addEventListener('click', function(e){
+  var a = e.target.closest('[data-track]');
+  if (a) track('cta_click', {cta: a.getAttribute('data-track')});
+});
+
+/* ---------- Imagem responsiva a partir do registro de foto ---------- */
+function srcset(f){ return f.larguras.map(function(w){ return f.base+'-'+w+'.webp '+w+'w'; }).join(', '); }
+function src(f){ return f.base+'-'+f.larguras[f.larguras.length-1]+'.webp'; }
+
+/* ---------- Carregamento de dados (arquivo separado da interface) ---------- */
+function carregar(){
+  var emb = JSON.parse($('#dados-embutidos').textContent);
+  return fetch('data/elevel.json', {cache:'no-cache'})
+    .then(function(r){ if(!r.ok) throw 0; return r.json(); })
+    .then(function(d){ return (d && d._versao >= (emb._versao || 0)) ? d : emb; })  // cache antigo nunca vence a cópia embutida
+    .catch(function(){ return emb; });
+}
+
+carregar().then(iniciar);
+
+/* ---------- WhatsApp flutuante (mobile) · independente dos dados: o link já vem pronto no HTML ---------- */
+(function(){
+  var fab = $('#wa-fab'), hero = $('#inicio'), contato = $('#contato'); if (!fab) return;
+  var t = false;
+  function fabVisivel(){
+    t = false;
+    var vh = Math.min(window.innerHeight, (window.visualViewport && window.visualViewport.height) || window.innerHeight, (window.screen && screen.height) || window.innerHeight);
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    var depoisHero = y > (hero ? hero.offsetHeight * .9 : 400);
+    var perto = contato ? contato.getBoundingClientRect().top < vh * .6 : false;        // no Contato o CTA principal já está na tela
+    var cobre = $$('.evita-fab').some(function(el){ var b = el.getBoundingClientRect(); return b.bottom > vh - 96 && b.top < vh; }); // nunca cobre um CTA
+    fab.classList.toggle('visivel', depoisHero && !perto && !cobre);
+  }
+  window.addEventListener('scroll', function(){ if (!t){ t = true; requestAnimationFrame(fabVisivel); } }, {passive:true});
+  window.addEventListener('resize', fabVisivel);
+  fabVisivel();
+})();
+
+function iniciar(D){
+  if (document.body.dataset.iniciado) return; document.body.dataset.iniciado = '1';
+
+  /* ===== WhatsApp e contato · FONTE ÚNICA: data/elevel.json > contato ===== */
+  var wa = D.contato.whatsapp, waMsg = D.contato.whatsapp_mensagem || '';
+  function linkWa(msg){ return wa ? 'https://wa.me/'+wa+'?text='+encodeURIComponent(msg || waMsg) : null; }
+  function ligarWa(a){
+    var l = linkWa(); if (!l) return;
+    a.href = l; a.target = '_blank'; a.rel = 'noopener';
+  }
+  $$('.js-whatsapp').forEach(function(a){
+    ligarWa(a);
+    a.addEventListener('click', function(){ track('whatsapp_click', {origem: a.getAttribute('data-track')}); });
+  });
+  // outros canais: só aparecem se o dado real existir
+  var canais = [
+    {r:'E-mail', v: D.contato.email, link: D.contato.email ? 'mailto:'+D.contato.email : null},
+    {r:'Instagram', v: D.contato.instagram ? '@'+D.contato.instagram : null, link: D.contato.instagram ? 'https://www.instagram.com/'+D.contato.instagram+'/' : null, nova:true}
+  ].filter(function(c){ return c.v; });
+  $('#canais').innerHTML = canais.map(function(c){
+    return '<li><span class="rotulo">'+c.r+'</span><a href="'+esc(c.link)+'"'+(c.nova?' target="_blank" rel="noopener"':'')+' data-track="contato_'+c.r.toLowerCase()+'">'+esc(c.v)+'</a></li>';
+  }).join('');
+  $('#canais').hidden = !canais.length;
+  $('#footer-redes').innerHTML = D.contato.instagram ? '<li><a href="https://www.instagram.com/'+esc(D.contato.instagram)+'/" target="_blank" rel="noopener">Instagram</a></li>' : '';
+  var ano = $('#ano'); if (ano) ano.textContent = new Date().getFullYear();
+  var CS = D.contato_secao;
+  if (CS){ $('#contato-txt').textContent = CS.texto; $('#contato-btn-t').textContent = CS.botao; $('#contato-rotulo').textContent = CS.rotulo; }
+
+  /* ===== 1. Hero: abertura institucional em motion (Fase 1) ou filme real (Fase 2) ===== */
+  var hm = $('#hero-midia'), hv = D.hero.video, mbox = $('#hero-motion');
+  var heroAnims = [], heroPausado = false;
+  if (hv && hv.desktop){
+    // Fase 2: o filme real ocupa o mesmo espaço, sem reconstruir o Hero
+    mbox.remove();
+    var v = document.createElement('video');
+    v.muted = true; v.loop = true; v.playsInline = true; v.autoplay = !reduz; v.preload = 'metadata';
+    if (hv.poster) v.poster = hv.poster;
+    v.src = (window.innerWidth < 760 && hv.mobile) ? hv.mobile : hv.desktop;
+    hm.appendChild(v);
+    $('#hero-loop').hidden = true;
+  } else {
+    var LOGO_SVG = $('#tpl-logo').innerHTML;
+    var T = 19;   // duração do loop em segundos
+
+    // Números vêm do arquivo de dados: trocar o valor lá atualiza a abertura
+    var MET = {}; D.metricas.forEach(function(m){ MET[m.id] = m; });
+    function numTxt(m, fallback){ return m && m.numero != null ? (m.prefixo||'') + m.numero : fallback; }
+    function sufTxt(m){ return m && m.sufixo ? m.sufixo.trim() : ''; }
+    var mFaces = MET.faces, mImp = MET.impactos;
+
+    var montarMotion = function(){
+      heroAnims.forEach(function(a){ a.cancel(); }); heroAnims = [];
+      mbox.innerHTML = '';
+      var mob = window.innerWidth < 760;
+      var E = 'cubic-bezier(.2,.7,.2,1)', EI = 'cubic-bezier(.6,0,.9,.4)', EIO = 'cubic-bezier(.65,0,.35,1)';
+
+      function el(html, css, cls){
+        var d = document.createElement('div'); d.className = 'm ' + (cls||''); d.innerHTML = html;
+        if (css) d.setAttribute('style', css); mbox.appendChild(d); return d;
+      }
+      function ln(t, extra){ return '<span class="ln'+(extra?' '+extra:'')+'"><span class="in">'+t+'</span></span>'; }
+      function letras(p){ return p.split('').map(function(c){ return ln(c, 'inl'); }).join(''); }
+      function dot(){ return '<span class="dot">.</span>'; }
+      function k(alvo, fr){
+        if (!alvo) return;
+        fr = fr.slice();
+        if (fr[0][0] > 0) fr.unshift([0, fr[0][1]]);
+        if (fr[fr.length-1][0] < T) fr.push([T, fr[fr.length-1][1]]);
+        var kf = fr.map(function(f){ var o = Object.assign({}, f[1]); o.offset = f[0]/T; o.easing = f[2] || E; return o; });
+        heroAnims.push(alvo.animate(kf, {duration: T*1000, iterations: Infinity, fill: 'both'}));
+      }
+      // entra por dentro de uma máscara e sai pelo lado oposto (folga vertical para acentos e cedilha)
+      function sobe(inner, tin, tout, dir, dur, sai){
+        var eixo = (dir === 'esq' || dir === 'dir') ? 'X' : 'Y', m = eixo === 'Y' ? '150%' : '110%';
+        var neg = (dir === 'baixo' || dir === 'esq');
+        var de = neg ? '-'+m : m, para = neg ? m : '-'+m;
+        dur = dur || .6; sai = sai || .4;
+        k(inner, [[tin,{transform:'translate'+eixo+'('+de+')'}],[tin+dur,{transform:'translate'+eixo+'(0)'}],[tout,{transform:'translate'+eixo+'(0)'},EI],[tout+sai,{transform:'translate'+eixo+'('+para+')'}]]);
+      }
+      function ponto(d, tin, tout){
+        k(d, [[tin,{transform:'scale(0)'}],[tin+.45,{transform:'scale(1)'},'cubic-bezier(.3,1.6,.5,1)'],[tout,{transform:'scale(1)'}],[tout+.3,{transform:'scale(0)'}]]);
+      }
+      function deriva(node, tin, tout, de, para){
+        k(node, [[tin,{transform:de},'linear'],[tout,{transform:para}],[Math.min(T, tout+.01),{transform:de}]]);
+      }
+
+      /* =====================================================
+         0,2–2,9s · GOIÂNIA.
+         ===================================================== */
+      var g = el(letras('GOIÂNIA') + '<span class="ln inl"><span class="in dot">.</span></span>',
+        mob ? 'left:5vw;top:44%;font-size:19vw' : 'left:var(--margem);top:34%;font-size:min(19vw, 40vh)');
+      $$('.in', g).forEach(function(s, i){ if (!s.classList.contains('dot')) sobe(s, .2 + i*.06, 2.35 + i*.03, 'cima', .8, .42); });
+      ponto($('.dot', g), 1.1, 2.5);
+      deriva(g, .2, 2.95, 'translateX(0)', 'translateX(-1.2vw)');
+
+      /* =====================================================
+         ROTINA · cada palavra é um quadro com composição própria
+         ===================================================== */
+
+      // TRABALHE. · 3,0–3,9s · a torre: palavra vertical, subindo como um edifício
+      var tr = el(ln('Trabalhe' + dot()), (mob ? 'right:4vw;font-size:14.5svh' : 'right:var(--margem);font-size:min(14svh, 12vw)') + ';top:50%', 'vertical');
+      sobe($('.in', tr), 3.0, 3.62, 'baixo', .42, .28);
+
+      // TREINE. · 4,0–4,9s · repetição: três séries, a última completa
+      var trn = el(ln('Treine','contorno') + ln('Treine','contorno') + ln('Treine' + dot()),
+        (mob ? 'left:5vw;top:30%;font-size:19vw' : 'left:var(--margem);top:24%;font-size:min(11vw, 19vh)') + ';line-height:.9');
+      $$('.ln > .in', trn).forEach(function(s, i){ sobe(s, 4.0 + i*.08, 4.5 + i*.04, 'cima', .34, .26); });
+
+      // MORE. · 5,0–5,8s · o chão: grande, pousada embaixo, muito espaço acima
+      var mo = el(ln('More' + dot()), mob ? 'left:5vw;top:63%;font-size:31vw' : 'left:var(--margem);top:52%;font-size:min(24vw, 44vh)');
+      sobe($('.in', mo), 5.0, 5.52, 'cima', .45, .26);
+
+      // VIVA. · 5,9–6,6s · expansão: maior que a tela, cortada nas duas bordas
+      var vv = el(ln('Viva' + dot()), mob ? 'right:4vw;top:42%;font-size:44vw' : 'right:var(--margem);top:50%;margin-top:-.47em;font-size:min(44vw, 86vh)');
+      sobe($('.in', vv), 5.9, 6.34, 'cima', .28, .24);
+
+      // CIRCULE. · 6,7–7,8s · passagem: atravessa o quadro e desacelera no centro
+      var ci = el('<span class="in">Circule' + dot() + '</span>', mob ? 'left:0;top:62%;font-size:22vw' : 'left:0;top:58%;font-size:min(15vw, 30vh)');
+      var cin = $('.in', ci);
+      k(cin, [[6.7,{transform:'translateX(100vw)'}],[7.05,{transform:'translateX(' + (mob?'5vw':'22vw') + ')'},'cubic-bezier(.1,.8,.3,1)'],[7.45,{transform:'translateX(' + (mob?'2vw':'18vw') + ')'},'cubic-bezier(.7,0,1,.5)'],[7.8,{transform:'translateX(-105%)'}]]);
+
+      /* =====================================================
+         ESCALA · números do arquivo de dados
+         ===================================================== */
+      var n1txt = numTxt(mFaces, ''), n1rot = mFaces ? mFaces.rotulo : 'Faces digitais';
+      var n1 = el(n1txt, mob ? 'right:-9vw;top:27%;font-size:62vw' : 'right:-3vw;top:50%;margin-top:-.47em;font-size:min(44vw, 66vh)', 'num-m');
+      k(n1, [[8.0,{opacity:0,transform:'translateY(14%)'}],[8.7,{opacity:1,transform:'translateY(0) scale(1)'}],[9.45,{opacity:1,transform:'translateY(0) scale(1.03)'},EI],[9.85,{opacity:0,transform:'translateY(-10%) scale(1.03)'}]]);
+      var e1 = el(ln(n1rot), mob ? 'left:5vw;top:62%' : 'left:var(--margem);bottom:14%', 'etq');
+      sobe($('.in', e1), 8.3, 9.4, 'cima', .5, .35);
+
+      var n2txt = numTxt(mImp, ''), n2suf = sufTxt(mImp), n2rot = mImp ? mImp.rotulo : 'Impactos por mês';
+      var n2 = el(mob ? n2txt : n2txt + '<span class="mil">' + n2suf + '</span>', mob ? 'left:-5vw;top:26%;font-size:45vw' : 'left:-2vw;top:50%;margin-top:-.47em;font-size:min(30vw, 58vh)', 'num-m');
+      k(n2, [[10.0,{opacity:0,transform:'translateY(14%)'}],[10.7,{opacity:1,transform:'translateY(0) scale(1)'}],[11.45,{opacity:1,transform:'translateY(0) scale(1.03)'},EI],[11.85,{opacity:0,transform:'translateY(-10%) scale(1.03)'}]]);
+      if (mob){
+        var n2b = el(ln(n2suf), 'right:5vw;top:48%;font-size:22vw', 'num-m');
+        sobe($('.in', n2b), 10.25, 11.4, 'cima', .55, .35);
+      }
+      var e2 = el(ln(n2rot), mob ? 'left:5vw;top:70%' : 'right:var(--margem);bottom:14%;text-align:right', 'etq');
+      sobe($('.in', e2), 10.35, 11.4, 'cima', .5, .35);
+
+      /* =====================================================
+         12,0–14,5s · PRESENÇA.
+         ===================================================== */
+      var pr = el('<span class="pres-camada pres-contorno">'+letras('PRESENÇA')+'</span>'+
+                  '<span class="pres-camada pres-cheio" aria-hidden="true">'+'PRESENÇA'.split('').map(function(c){ return '<span class="ln inl"><span>'+c+'</span></span>'; }).join('')+'</span>'+
+                  '<span class="dot pres-dot">.</span>',
+        (mob ? 'left:5vw;top:45%;font-size:16.2vw' : 'left:var(--margem);top:50%;margin-top:-.47em;font-size:min(15.5vw, 34vh)') + ';letter-spacing:-.05em');
+      $$('.pres-contorno .in', pr).forEach(function(s, i){ sobe(s, 12.0 + i*.045, 14.15, 'cima', .6, .4); });
+      k($('.pres-cheio', pr), [[12.6,{clipPath:'inset(-10% 100% -10% 0)'}],[13.5,{clipPath:'inset(-10% 0% -10% 0)'},EIO],[14.1,{clipPath:'inset(-10% 0% -10% 0)'},EI],[14.5,{clipPath:'inset(-10% 0% -10% 100%)'}]]);
+      ponto($('.pres-dot', pr), 13.4, 14.2);
+      deriva(pr, 12.0, 14.5, 'translateX(0)', 'translateX(-1vw)');
+
+      /* =====================================================
+         14,8–17,4s · ASSINATURA · as duas frases em tempos próprios
+         ===================================================== */
+      var L = mob ? ['Sua marca' + dot(), 'Nos lugares', 'certos' + dot()] : ['Sua marca' + dot(), 'Nos lugares certos' + dot()];
+      var as = el(L.map(function(t){ return ln(t); }).join(''),
+        (mob ? 'left:5vw;top:36%;font-size:12.4vw' : 'left:var(--margem);top:50%;margin-top:-.95em;font-size:min(7.2vw, 15vh)') + ';line-height:.95;letter-spacing:-.04em');
+      var asl = $$('.ln > .in', as);
+      // "Sua marca." entra sozinha; a segunda frase chega depois de uma pausa
+      asl.forEach(function(s, i){
+        var tin = i === 0 ? 14.8 : 15.45 + (i-1)*.14;
+        sobe(s, tin, 17.0 + i*.05, 'cima', .7, .4);
+      });
+      $$('.dot', as).forEach(function(d, i){ ponto(d, i === 0 ? 15.2 : 16.0, 17.05); });
+
+      /* =====================================================
+         17,5–19s · ELEVEL · a logo oficial respira antes do reinício
+         ===================================================== */
+      var lg = el(LOGO_SVG, mob ? 'left:15vw;top:calc(47% - 8.6vw);width:70vw' : 'left:calc(50% - min(18vw, 260px));top:calc(50% - min(4.4vw, 64px));width:min(36vw, 520px)', 'logo-m');
+      k(lg, [[17.5,{opacity:0,transform:'translateY(12px)'}],[18.2,{opacity:1,transform:'none'}],[18.55,{opacity:1,transform:'none'},EI],[18.95,{opacity:0,transform:'translateY(-6px)'}]]);
+
+      /* trilho discreto do loop */
+      k($('#hero-trilho'), [[0,{transform:'scaleX(0)'},'linear'],[T,{transform:'scaleX(1)'}]]);
+
+      var t0 = document.timeline.currentTime;
+      heroAnims.forEach(function(a){ a.startTime = t0; if (heroPausado) a.pause(); });
+    };
+
+    var montarEstatico = function(){
+      // Menos movimento: um único quadro, a assinatura com a logo
+      var mob = window.innerWidth < 760;
+      mbox.innerHTML = '<div class="m estatico" style="left:'+(mob?'5vw':'var(--margem)')+';top:'+(mob?'34%':'50%')+';'+(mob?'':'margin-top:-.95em;')+'font-size:'+(mob?'12.4vw':'min(7.2vw, 15vh)')+';line-height:.95;letter-spacing:-.04em">'+
+        (mob ? 'Sua marca<span class="dot">.</span><br>Nos lugares<br>certos<span class="dot">.</span>' : 'Sua marca<span class="dot">.</span><br>Nos lugares certos<span class="dot">.</span>')+'</div>'+
+        '<div class="m logo-m" style="'+(mob?'left:5vw;top:66%;width:44vw':'left:var(--margem);bottom:16%;width:min(18vw, 260px)')+'">'+LOGO_SVG+'</div>';
+      $('.pausar').hidden = true;
+      $('#hero-trilho').style.transform = 'scaleX(1)';
+    };
+
+    if (reduz || !Element.prototype.animate){ montarEstatico(); }
+    else {
+      montarMotion();
+      var eraMob = window.innerWidth < 760, rt;
+      window.addEventListener('resize', function(){
+        clearTimeout(rt);
+        rt = setTimeout(function(){ var m = window.innerWidth < 760; if (m !== eraMob){ eraMob = m; montarMotion(); } }, 200);
+      });
+      var visivel = true;
+      function atualizar(){ var rodar = visivel && !document.hidden && !heroPausado; heroAnims.forEach(function(a){ rodar ? a.play() : a.pause(); }); }
+      if ('IntersectionObserver' in window){
+        new IntersectionObserver(function(es){ visivel = es[0].isIntersecting; atualizar(); }).observe($('#inicio'));
+      }
+      document.addEventListener('visibilitychange', atualizar);
+      var pb = $('#hero-pausar');
+      pb.addEventListener('click', function(){
+        heroPausado = !heroPausado; atualizar();
+        pb.setAttribute('aria-pressed', heroPausado);
+        pb.setAttribute('aria-label', heroPausado ? 'Retomar animação de abertura' : 'Pausar animação de abertura');
+        pb.innerHTML = heroPausado ? '<svg viewBox="0 0 12 12" fill="currentColor" aria-hidden="true"><path d="M2 1l9 5-9 5z"/></svg>' : '<svg viewBox="0 0 12 12" fill="currentColor" aria-hidden="true"><rect x="2" y="1" width="3" height="10"/><rect x="7" y="1" width="3" height="10"/></svg>';
+        track('hero_motion_' + (heroPausado ? 'pausado' : 'retomado'));
+      });
+    }
+  }
+
+
+  /* ===== 3. Elevel em números · fonte única: data/elevel.json → metricas ===== */
+  var METRICAS = {}; D.metricas.forEach(function(m){ METRICAS[m.id] = m; });
+  // Qualquer elemento com data-metrica="id" recebe o número; data-metrica-rotulo recebe o rótulo.
+  $$('[data-metrica]').forEach(function(el){
+    var m = METRICAS[el.dataset.metrica];
+    if (!m || m.numero == null){ el.closest('.escala-bloco') ? el.closest('.escala-bloco').hidden = true : el.hidden = true; return; }
+    var suf = m.sufixo ? '<span class="mil">'+esc(m.sufixo.trim())+'</span>' : '';
+    el.innerHTML = esc(m.prefixo || '') + esc(m.numero) + suf;
+    el.setAttribute('aria-label', (m.prefixo === '+' ? 'Mais de ' : '') + m.numero + (m.sufixo || '') + ' ' + m.rotulo.toLowerCase());
+  });
+  $$('[data-metrica-rotulo]').forEach(function(el){
+    var m = METRICAS[el.dataset.metricaRotulo]; if (m) el.textContent = m.rotulo;
+  });
+  // Preenchimento guiado pelo scroll: o número nasce em contorno e se completa ao chegar ao centro da tela
+  var preenche = $$('[data-preenche]'), costura = $('#costura');
+  function escalaScroll(){
+    var vh = window.innerHeight;
+    preenche.forEach(function(el){
+      var r = el.getBoundingClientRect(), centro = r.top + r.height/2;
+      var p = Math.min(1, Math.max(0, (vh*.95 - centro) / (vh*.5)));
+      el.style.setProperty('--f', (p*100).toFixed(1) + '%');
+    });
+    if (costura){
+      var rc = costura.getBoundingClientRect();
+      costura.style.setProperty('--c', Math.min(1, Math.max(0, (vh*.8 - rc.top) / (vh*.4))).toFixed(3));
+    }
+  }
+  if (reduz){ preenche.forEach(function(el){ el.style.setProperty('--f','100%'); }); }
+  else {
+    var escTick = false;
+    window.addEventListener('scroll', function(){ if (!escTick){ escTick = true; requestAnimationFrame(function(){ escTick = false; escalaScroll(); }); } }, {passive:true});
+    window.addEventListener('resize', escalaScroll);
+    escalaScroll();
+  }
+
+  /* ===== 4. Fazemos parte da rotina · scroll natural, deslocamento horizontal ===== */
+  var R = D.rotina, classes = ['m-trabalhe','m-treine','m-more','m-viva','m-circule'];
+  $('#momentos').innerHTML = R.map(function(r, i){
+    return '<li class="momento '+(classes[i]||'')+'"><span class="par" aria-hidden="true"><span class="verbo">'+esc(r.verbo)+'<span class="ponto">.</span></span>'+
+      '<span class="cat">'+esc(r.ambiente.replace(/\.$/,''))+'</span></span><span class="sr-only">'+esc(r.verbo)+': '+esc(r.ambiente)+'</span></li>';
+  }).join('');
+  // cada palavra tem sua direção e amplitude de deslocamento (em vw)
+  var desloc = [{de:-14,para:0},{de:14,para:0},{de:-10,para:4},{de:0,para:0,escala:true},{de:34,para:-18}];
+  var momentos = $$('.momento'), costura2 = $('#costura2');
+  if ('IntersectionObserver' in window){
+    var ioM = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('visto'); ioM.unobserve(e.target); track('rotina_momento', {momento: e.target.querySelector('.sr-only').textContent}); } }); }, {rootMargin:'0px 0px -30% 0px'});
+    momentos.forEach(function(m){ ioM.observe(m); });
+  } else { momentos.forEach(function(m){ m.classList.add('visto'); }); }
+  function rotinaScroll(){
+    if (reduz) return;
+    var vh = window.innerHeight, mob = window.innerWidth < 760;
+    momentos.forEach(function(m, i){
+      var r = m.getBoundingClientRect();
+      var p = Math.min(1, Math.max(0, (vh - r.top) / (vh + r.height)));   // 0 entrando por baixo, 1 saindo por cima
+      var d = desloc[i] || {de:0, para:0}, k = mob ? .6 : 1;
+      var t = i === 4 ? p : Math.min(1, p / .55);                          // CIRCULE atravessa durante todo o percurso
+      var ease = i === 4 ? t : 1 - Math.pow(1 - t, 3);
+      var x = (d.de + (d.para - d.de) * ease) * k;
+      var v = m.querySelector('.verbo');
+      m.querySelector('.par').style.setProperty('--x', x.toFixed(2) + 'vw');
+      if (d.escala){ v.style.transform = 'scale(' + (.86 + .14 * Math.min(1, p / .5)).toFixed(3) + ')'; }
+    });
+    if (costura2){
+      var rc = costura2.getBoundingClientRect();
+      costura2.style.setProperty('--c', Math.min(1, Math.max(0, (vh*.8 - rc.top) / (vh*.4))).toFixed(3));
+    }
+  }
+
+  /* ===== Scroll: header, transição, rotina, barra mobile ===== */
+  var rolarEl = $('.rolar');
+  var header = $('#header'), trans = $('#transicao'), rot = $('#rotina'), barra = $('#wa-fab'), hero = $('#inicio'), contato = $('#contato');
+  var tick = false;
+  function aoRolar(){
+    tick = false;
+    var y = window.scrollY, vh = window.innerHeight;
+    header.classList.toggle('solido', y > 40);
+    rolarEl.style.opacity = y > 24 ? '0' : '';
+    if (!reduz){
+      var r = trans.getBoundingClientRect(), total = trans.offsetHeight - vh;
+      var p = Math.min(1, Math.max(0, -r.top / total));
+      trans.style.setProperty('--p', Math.min(1, Math.max(0, (p - .25) / .35)).toFixed(3));
+      trans.style.setProperty('--p2', Math.min(1, Math.max(0, (p - .1) / .3)).toFixed(3));
+      trans.style.setProperty('--p3', Math.min(1, Math.max(0, (p - .45) / .3)).toFixed(3));
+    }
+    rotinaScroll();
+  }
+  window.addEventListener('scroll', function(){ if (!tick){ tick = true; requestAnimationFrame(aoRolar); } }, {passive:true});
+  window.addEventListener('resize', aoRolar);
+  aoRolar();
+
+  /* ===== Menu mobile ===== */
+  var mb = $('.menu-btn'), mm = $('#menu-mobile');
+  function menu(abrir){
+    mm.hidden = !abrir; document.body.classList.toggle('menu-aberto', abrir);
+    mb.setAttribute('aria-expanded', abrir); mb.setAttribute('aria-label', abrir ? 'Fechar menu' : 'Abrir menu');
+    document.body.style.overflow = abrir ? 'hidden' : '';
+    header.classList.toggle('solido', abrir || window.scrollY > 40);
+  }
+  mb.addEventListener('click', function(){ menu(mm.hidden); });
+  $$('a', mm).forEach(function(a){ a.addEventListener('click', function(){ menu(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && !mm.hidden){ menu(false); mb.focus(); } });
+
+  /* ===== 5. Nossa Rede · portfólio editorial gerado a partir de D.pontos ===== */
+  (function(){
+    var R = D.rede || {}, P = D.pontos || [];
+    function pad(n){ return (n < 10 ? '0' : '') + n; }
+    function contexto(p){
+      // público: nunca exibe marcações de trabalho; contexto ausente simplesmente não aparece
+      if (!p.contexto || !p.contexto.length) return '';
+      return p.contexto.map(esc).join('<span class="mais" aria-hidden="true">+</span>');
+    }
+    function figura(f, cls, mob, i, num){
+      if (f.placeholder) return ''; // sem foto real: nada é exibido ao visitante (pendência fica nos dados)
+      var ar = f.proporcao || (mob && i === 0 && f.h > f.w ? '4/5' : f.w + '/' + f.h);
+      var sizes = mob ? (i === 0 ? '100vw' : '72vw') : (i === 0 ? '66vw' : '34vw');
+      return '<figure class="at-f '+cls+'">'+
+        '<div class="at-img" style="aspect-ratio:'+ar+'"><img src="'+src(f)+'" srcset="'+srcset(f)+'" sizes="'+sizes+'" alt="'+esc(f.alt)+'" loading="lazy" decoding="async" style="object-position:'+(f.foco || '50% 50%')+'">'+
+        '</div>'+
+        (f.legenda ? '<figcaption>'+esc(f.legenda)+'</figcaption>' : '')+'</figure>';
+    }
+    function ativo(p, k){
+      var num = pad(k + 1), L = R.layouts || [];
+      var layout = p.layout || L[k % Math.max(1, L.length)] || 'compacto';
+      var dist = (p.distribuicao && p.distribuicao.length) ? '<ul class="at-dist" aria-label="Distribuição das faces">'+p.distribuicao.map(function(d, j){
+        return (j ? '<li class="mais" aria-hidden="true">+</li>' : '')+'<li><b>'+pad(d.faces)+'</b><span>'+esc(d.rotulo)+'</span></li>';
+      }).join('')+'</ul>' : '';
+      var fd = (p.imagens.desktop || []).map(function(f, i){ return figura(f, 'fd fd'+(i+1), false, i, num); }).join('');
+      var fm = (p.imagens.mobile || []).map(function(f, i){ return figura(f, 'fm fm'+(i+1), true, i, num); }).join('');
+      return '<article class="ativo l-'+layout+'" id="rede-'+esc(p.id)+'" aria-labelledby="rede-n-'+esc(p.id)+'" data-faces="'+p.faces+'">'+
+        '<p class="at-cab"><span class="at-num">'+num+'</span><i class="at-regua" aria-hidden="true"></i><span class="at-ctx">'+contexto(p)+'</span></p>'+
+        '<h3 class="at-nome" id="rede-n-'+esc(p.id)+'">'+esc(p.nome)+'<span class="ponto">.</span></h3>'+
+        '<div class="at-info"><p class="at-faces"><span class="qt">'+pad(p.faces)+'</span><span class="rot">Faces<br>digitais</span></p>'+dist+
+        (p.copy ? '<p class="at-copy">'+esc(p.copy)+'</p>' : '')+'</div>'+
+        fd + fm + '</article>';
+    }
+    if (R.lead) $('#rede-lead').textContent = R.lead;
+    $('#rede-indice').innerHTML = P.map(function(p, k){
+      return '<li><a href="#rede-'+esc(p.id)+'" data-track="rede_indice_'+esc(p.id)+'"><span class="n">'+pad(k+1)+'</span><span>'+esc(p.nome)+'</span><span class="seta" aria-hidden="true">↓</span></a></li>';
+    }).join('');
+    $('#rede-ativos').innerHTML = P.map(ativo).join('');
+    $$('#rede-indice a').forEach(function(a){
+      a.addEventListener('click', function(e){
+        var alvo = document.querySelector(a.getAttribute('href')); if (!alvo) return;
+        e.preventDefault();
+        var y = alvo.getBoundingClientRect().top + window.pageYOffset - (parseFloat(getComputedStyle(alvo).scrollMarginTop) || 0);
+        window.scrollTo({top: y, behavior: reduz ? 'auto' : 'smooth'});
+        if (history.replaceState) history.replaceState(null, '', a.getAttribute('href'));
+        alvo.setAttribute('tabindex', '-1'); alvo.focus({preventScroll: true});
+        track('rede_indice', {ponto: alvo.id.replace('rede-', '')});
+      });
+    });
+
+    // Fechamento: número público vem de metricas (+60); a contagem de ambientes vem dos pontos
+    var mf = (D.metricas || []).filter(function(m){ return m.id === 'faces'; })[0];
+    $('#rede-fim').innerHTML = '<p>'+(mf ? esc((mf.prefixo||'')+mf.numero+(mf.sufixo||''))+' faces digitais. ' : '')+'<span class="mudo">'+pad(P.length)+' ambientes. '+esc(R.fechamento || '')+'<span class="ponto">.</span></span></p>';
+
+    // Conferência interna: soma real das faces × comunicação pública
+    var soma = P.reduce(function(t, p){ return t + (p.faces || 0); }, 0);
+    $('#rede').dataset.somaFaces = soma;
+
+
+    var ativos = $$('.ativo');
+    if ('IntersectionObserver' in window && !reduz){
+      var ioR = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('visto'); ioR.unobserve(e.target); track('rede_ativo_visto', {ponto: e.target.id.replace('rede-', '')}); } }); }, {rootMargin:'0px 0px -20% 0px'});
+      ativos.forEach(function(a){ ioR.observe(a); });
+    } else ativos.forEach(function(a){ a.classList.add('visto'); });
+  })();
+
+  /* ===== 6. Para Anunciantes ===== */
+  (function(){
+    var A = D.anunciantes; if (!A) return;
+    function linhas(arr){ return arr.map(function(t){ return '<span class="m"><span>'+esc(t)+'</span></span>'; }).join(' '); }
+    var T = A.titulo;
+    $('#anunc-t').innerHTML = '<span class="fr fr-a">'+linhas(T[0])+'</span> <span class="fr fr-b">'+linhas(T[1]).replace(/\.<\/span><\/span>$/, '<span class="ponto">.</span></span></span>')+'</span>';
+    $('#anunc-rotulo').textContent = A.rotulo;
+    $('#anunc-intro').textContent = A.intro;
+    var f = A.foto;
+    $('#anunc-foto').innerHTML = '<div class="img" style="aspect-ratio:'+f.w+'/'+f.h+'"><img src="'+src(f)+'" srcset="'+srcset(f)+'" sizes="(max-width:959px) 90vw, 40vw" alt="'+esc(f.alt)+'" loading="lazy" decoding="async" style="object-position:50% 55%"></div><figcaption>'+esc(f.legenda)+'</figcaption>';
+    var ideias = A.conceitos.filter(function(c){ return !c.sintese; }), sint = A.conceitos.filter(function(c){ return c.sintese; })[0];
+    $('#anunc-ideias').innerHTML = ideias.map(function(c){ return '<li class="ideia"><h3>'+esc(c.palavra)+'<span class="ponto">.</span></h3><p>'+esc(c.texto)+'</p></li>'; }).join('');
+    if (sint) $('#anunc-sintese').innerHTML = '<h3><span class="pal">'+esc(sint.palavra)+'</span><span class="ponto">.</span></h3><p>'+esc(sint.texto)+'</p>';
+    $('#anunc-pergunta').innerHTML = A.cta.pergunta.map(function(t, i){ return '<span>'+esc(t)+'</span>'; }).join(' ');
+    $('#anunc-btn-t').textContent = A.cta.botao;
+    $('#anunc-apoio').textContent = A.cta.apoio || '';
+    // CTA comercial: abre o WhatsApp com mensagem pronta assim que o número estiver cadastrado em contato.whatsapp
+    var b = $('#anunc-btn'); ligarWa(b); b.setAttribute('aria-label', A.cta.botao + ' pelo WhatsApp (abre em nova aba)');
+    b.addEventListener('click', function(){ track('whatsapp_click', {origem: 'anunciantes_cta'}); });
+
+    var alvos = [$('#anunc-t'), $('#anunc-foto'), $('#anunc-sintese')].concat($$('.ideia'));
+    if ('IntersectionObserver' in window && !reduz){
+      var ioA = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('visto'); ioA.unobserve(e.target); if (e.target.id === 'anunc-sintese') track('anunciantes_sintese_vista', {}); } }); }, {rootMargin:'0px 0px -18% 0px'});
+      alvos.forEach(function(a){ ioA.observe(a); });
+    } else alvos.forEach(function(a){ a.classList.add('visto'); });
+  })();
+
+  /* ===== 7. A Elevel · crença, risco pelo scroll e conclusão ===== */
+  (function(){
+    var E = D.a_elevel; if (!E) return;
+    $('#elevel-rotulo').textContent = E.rotulo;
+    $('#elevel-crenca').innerHTML = E.crenca.map(function(t, i){
+      var h = esc(t);
+      if (E.risco && t.toLowerCase().indexOf(E.risco.toLowerCase()) > -1){
+        var k = t.toLowerCase().indexOf(E.risco.toLowerCase());
+        h = esc(t.slice(0, k)) + '<span class="risco">' + esc(t.slice(k, k + E.risco.length)) + '<i class="traco" aria-hidden="true"></i></span>' + esc(t.slice(k + E.risco.length));
+      }
+      return '<span class="seg">'+h+'</span>' + (i === 1 ? '<span class="quebra" aria-hidden="true"></span>' : '');
+    }).join(' ');
+    $('#elevel-conclusao').innerHTML = E.conclusao.map(function(t, i, a){
+      var h = esc(t); if (i === a.length - 1) h = h.replace(/\.$/, '<span class="ponto">.</span>');
+      return '<span class="m'+(i === 0 ? ' c1' : '')+'"><span>'+h+'</span></span>';
+    }).join(' ');
+    $('#elevel-texto').innerHTML = '<div>'+E.texto.map(function(p){ return '<p>'+esc(p)+'</p>'; }).join('')+'</div>';
+
+    var risco = $('#elevel-crenca .risco'), sec = $('#a-elevel');
+    if (reduz || !risco){ if (risco) risco.style.setProperty('--r', 1); }
+    else {
+      var t2 = false;
+      function riscar(){
+        t2 = false;
+        var r = risco.getBoundingClientRect(), vh = window.innerHeight;
+        // o traço corre enquanto a frase sobe do terço inferior até perto do centro
+        var p = Math.min(1, Math.max(0, (vh * .8 - r.top) / (vh * .25)));
+        risco.style.setProperty('--r', p.toFixed(3));
+      }
+      window.addEventListener('scroll', function(){ if (!t2){ t2 = true; requestAnimationFrame(riscar); } }, {passive:true});
+      window.addEventListener('resize', riscar);
+      riscar();
+    }
+    var alvosE = [$('#elevel-conclusao'), $('#elevel-texto')];
+    if ('IntersectionObserver' in window && !reduz){
+      var ioE = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('visto'); ioE.unobserve(e.target); if (e.target.id === 'elevel-conclusao') track('a_elevel_vista', {}); } }); }, {rootMargin:'0px 0px -22% 0px'});
+      alvosE.forEach(function(a){ ioE.observe(a); });
+    } else alvosE.forEach(function(a){ a.classList.add('visto'); });
+  })();
+
+}
+
+})();
+</script>
+</body>
+</html>
